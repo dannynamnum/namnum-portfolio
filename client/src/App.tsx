@@ -5,16 +5,34 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import Work from "./pages/Work";
+import CaseStudyPage from "./pages/CaseStudyPage";
+import About from "./pages/About";
+import { useEffect } from "react";
+import { useLocation } from "wouter";
 
+function ScrollToTop() {
+  const [location] = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+  return null;
+}
 
 function Router() {
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <>
+      <ScrollToTop />
+      <Switch>
+        <Route path={"/"} component={Home} />
+        <Route path={"/work"} component={Work} />
+        <Route path={"/work/:slug"} component={CaseStudyPage} />
+        <Route path={"/about"} component={About} />
+        <Route path={"/404"} component={NotFound} />
+        {/* Final fallback route */}
+        <Route component={NotFound} />
+      </Switch>
+    </>
   );
 }
 
