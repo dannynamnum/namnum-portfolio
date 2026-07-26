@@ -165,16 +165,7 @@ export default function CaseStudyPage() {
         {cs.slug === "penn-entertainment" && (
           <div className="border-t border-ink/10 py-12 md:py-16">
             <div className="mx-auto max-w-[1400px] px-5 md:px-10">
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-[1fr_2fr] items-start">
-                <Reveal as="figure">
-                  <img
-                    src={A.pennLiveUser}
-                    alt="Casino guest using the redesigned PENN Play kiosk"
-                    loading="eager"
-                    className="w-full max-h-[320px] object-cover object-top border border-ink/10"
-                  />
-                  <figcaption className="mt-2 font-meta text-[10px] text-ink/45">On-floor usability observation, Hollywood Casino at The Meadows</figcaption>
-                </Reveal>
+              <div className="grid gap-6 items-start">
                 <Reveal delay={80} as="figure">
                   <img
                     src={A.pennStyleGuide}
