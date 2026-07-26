@@ -132,6 +132,75 @@ export const caseStudies: CaseStudy[] = [
     },
     featured: true,
 },
+
+  {
+    slug: "penn-entertainment",
+    index: "07",
+    title: "PENN Entertainment",
+    headline: "Kiosks That Work for the People Who Actually Use Them.",
+    oneLiner:
+      "A field-research-driven redesign of casino floor kiosks used by millions of guests — backed by a design system spanning kiosk, app, and web.",
+    industry: "Hospitality",
+    filter: "fintech",
+    hero: A.pennCasinoFloor,
+    heroAlt: "A PENN Play kiosk on the casino floor at Hollywood Casino",
+    cardImage: A.pennCasinoFloor,
+    details: {
+      role: "Senior Product Designer",
+      industry: "Hospitality · Casino · Kiosk",
+      timeline: "1.5 years",
+      scope: "Product & UX/UI Design · Design System",
+    },
+    problem: {
+      label: "The Problem",
+      heading: "Most guests are 55+. Most kiosks weren't designed for them.",
+      body: [
+        "Penn Entertainment runs self-service kiosks on casino floors around the country, and most of the guests using them are 55 and up. A lot of them aren't comfortable with a touchscreen. So before I designed anything, I watched. I paired real usability testing with hours on the floor, just observing people use the machines. Every change I made came from something I actually saw trip someone up.",
+      ],
+      bullets: [
+        { text: "Balance display lacked clarity — guests confused about Gaming vs Non-Gaming balances." },
+        { text: "Back navigation broke flow — returning from a promo reset scroll position." },
+        { text: "Top menu placement blocked access — shorter guests couldn't reach the nav tabs." },
+        { text: "Start interaction was unclear — guests tried tapping instead of swiping their card." },
+        { text: "Download App banner misled — guests tapped it thinking it was a button." },
+        { text: "Multi-touch input caused missed taps — guests used palm taps, a habit from slot machines." },
+      ],
+    },
+    solution: {
+      label: "The Solution",
+      heading: "Seven fixes. All from watching real people use the machine.",
+      body: [
+        "That became seven fixes. A promo banner people kept mashing like a button, so I toned it down until it read as information. Buttons big enough to invite palm taps — a habit that comes right off the slot machines — so I sized them for a single finger. A menu sitting too high for shorter guests, so I dropped it to the bottom where everyone could reach it.",
+        "I gave engineering the full set, ranked by effort and impact so they'd know where to start. I also run the design system tying the kiosk, the Penn Host app, and the web together, so none of these fixes live in just one place.",
+      ],
+      images: [
+        { src: A.pennStyleGuide, alt: "PENN Entertainment kiosk design system one-sheeter" },
+      ],
+    },
+    beforeAfter: {
+      heading: "Before & After",
+      body: "The original interface stacked everything in a single column with a promotional banner that guests kept tapping like a button. The redesign introduced a two-column card grid, a bottom navigation bar reachable by everyone, and a clear visual hierarchy — so guests could find what they needed and act on it without confusion.",
+      before: { src: A.pennBefore, alt: "PENN Entertainment kiosk — before redesign" },
+      after: { src: A.pennAfter, alt: "PENN Entertainment kiosk — after redesign" },
+    },
+    metrics: [
+      { value: "97", label: "Color tokens in the design system" },
+      { value: "56", label: "Components built" },
+      { value: "128", label: "Component variants" },
+    ],
+    results: {
+      heading: "Validated on the floor. Shipped across the system.",
+      body: [
+        "The redesign was validated by the people who actually use the machines. Guests navigated faster, made fewer errors, and — critically — told us they noticed the difference. The design system that came out of this work now spans the kiosk, the Penn Host app, and the web, ensuring every touchpoint speaks the same visual language.",
+      ],
+    },
+    userQuote: {
+      quote: "Love how easy it was to use, much better than the old one.",
+      attribution: "Casino guest, Hollywood Casino at The Meadows",
+    },
+    featured: true,
+},
+
   {
     slug: "gl-homes",
     index: "02",
@@ -207,6 +276,64 @@ export const caseStudies: CaseStudy[] = [
     },
     featured: true,
 },
+
+  {
+    slug: "payology-app",
+    index: "04",
+    title: "Payology App",
+    headline: "An intuitive platform for financial transactions.",
+    oneLiner:
+      "Payology's first-ever financial platform — a scalable foundation for its entire suite of enterprise products.",
+    industry: "Fintech",
+    filter: "fintech",
+    hero: A.payAppDark,
+    heroAlt: "Payology enterprise application interface in dark mode",
+    cardImage: A.payAppDark,
+    details: {
+      role: "Lead UX/UI Designer",
+      industry: "Fintech · Enterprise SaaS",
+      scope: "Product & UX/UI Design",
+    },
+    problem: {
+      label: "The Problem",
+      heading: "Designing a platform for complex financial workflows.",
+      body: [
+        "Payology needed to build its first-ever financial platform — one that would serve as the foundation for its suite of enterprise products. Everything had to be designed from the ground up, and it had to be powerful without being complicated.",
+      ],
+      bullets: [
+        { text: "No existing framework — the entire user journey, navigation, and workflow structure had to be designed from scratch." },
+        { text: "Complex financial workflows — enterprise users needed a clear interface that simplified transactions and approvals." },
+        { text: "Brand flexibility — the platform had to support client-specific branding while staying cohesive." },
+        { text: "Data-heavy interactions — users needed structured data presentation to analyze reports and complete transactions quickly." },
+      ],
+    },
+    solution: {
+      label: "The Solution",
+      heading: "A clear, scalable system for enterprise finance.",
+      body: [
+        "I designed a user-first financial platform that balanced structure, flexibility, and scalability.",
+      ],
+      bullets: [
+        { title: "Structured workflows", text: "A step-by-step process that made financial operations clear and efficient." },
+        { title: "Intuitive navigation", text: "Key actions surfaced to reduce cognitive load and improve transaction clarity." },
+        { title: "Scalable UI framework", text: "Built to support future product expansion with a consistent experience." },
+        { title: "Enterprise branding", text: "Clients integrate their own branding without disrupting usability." },
+        { title: "Optimized data visualization", text: "Clean, structured dashboards for processing reports and transactions efficiently." },
+      ],
+      images: [
+        { src: A.payAppIpads, alt: "Payology platform screens across tablets" },
+        { src: A.payMenuBeforeAfter, alt: "Payology navigation menu — before and after redesign" },
+        { src: A.payAppMobile, alt: "Payology mobile login experience" },
+      ],
+    },
+        results: {
+      heading: "The foundation of Payology's digital ecosystem.",
+      body: [
+        "Designed with flexibility in mind, the Payology application became the foundation for the company's digital ecosystem — allowing enterprise clients to tailor their experiences while ensuring seamless scalability as the product suite grows.",
+      ],
+    },
+    featured: true,
+},
   {
     slug: "payology-website",
     index: "03",
@@ -268,62 +395,7 @@ export const caseStudies: CaseStudy[] = [
       ],
     },
   },
-  {
-    slug: "payology-app",
-    index: "04",
-    title: "Payology App",
-    headline: "An intuitive platform for financial transactions.",
-    oneLiner:
-      "Payology's first-ever financial platform — a scalable foundation for its entire suite of enterprise products.",
-    industry: "Fintech",
-    filter: "fintech",
-    hero: A.payAppDark,
-    heroAlt: "Payology enterprise application interface in dark mode",
-    cardImage: A.payAppDark,
-    details: {
-      role: "Lead UX/UI Designer",
-      industry: "Fintech · Enterprise SaaS",
-      scope: "Product & UX/UI Design",
-    },
-    problem: {
-      label: "The Problem",
-      heading: "Designing a platform for complex financial workflows.",
-      body: [
-        "Payology needed to build its first-ever financial platform — one that would serve as the foundation for its suite of enterprise products. Everything had to be designed from the ground up, and it had to be powerful without being complicated.",
-      ],
-      bullets: [
-        { text: "No existing framework — the entire user journey, navigation, and workflow structure had to be designed from scratch." },
-        { text: "Complex financial workflows — enterprise users needed a clear interface that simplified transactions and approvals." },
-        { text: "Brand flexibility — the platform had to support client-specific branding while staying cohesive." },
-        { text: "Data-heavy interactions — users needed structured data presentation to analyze reports and complete transactions quickly." },
-      ],
-    },
-    solution: {
-      label: "The Solution",
-      heading: "A clear, scalable system for enterprise finance.",
-      body: [
-        "I designed a user-first financial platform that balanced structure, flexibility, and scalability.",
-      ],
-      bullets: [
-        { title: "Structured workflows", text: "A step-by-step process that made financial operations clear and efficient." },
-        { title: "Intuitive navigation", text: "Key actions surfaced to reduce cognitive load and improve transaction clarity." },
-        { title: "Scalable UI framework", text: "Built to support future product expansion with a consistent experience." },
-        { title: "Enterprise branding", text: "Clients integrate their own branding without disrupting usability." },
-        { title: "Optimized data visualization", text: "Clean, structured dashboards for processing reports and transactions efficiently." },
-      ],
-      images: [
-        { src: A.payAppIpads, alt: "Payology platform screens across tablets" },
-        { src: A.payMenuBeforeAfter, alt: "Payology navigation menu — before and after redesign" },
-        { src: A.payAppMobile, alt: "Payology mobile login experience" },
-      ],
-    },
-    results: {
-      heading: "The foundation of Payology's digital ecosystem.",
-      body: [
-        "Designed with flexibility in mind, the Payology application became the foundation for the company's digital ecosystem — allowing enterprise clients to tailor their experiences while ensuring seamless scalability as the product suite grows.",
-      ],
-    },
-},
+
   {
     slug: "model-showcase",
     index: "05",
@@ -376,6 +448,7 @@ export const caseStudies: CaseStudy[] = [
       ],
     },
   },
+
   {
     slug: "options-catalog",
     index: "06",
@@ -431,73 +504,7 @@ export const caseStudies: CaseStudy[] = [
       ],
     },
   },
-  {
-    slug: "penn-entertainment",
-    index: "07",
-    title: "PENN Entertainment",
-    headline: "Kiosks That Work for the People Who Actually Use Them.",
-    oneLiner:
-      "A field-research-driven redesign of casino floor kiosks used by millions of guests — backed by a design system spanning kiosk, app, and web.",
-    industry: "Hospitality",
-    filter: "fintech",
-    hero: A.pennCasinoFloor,
-    heroAlt: "A PENN Play kiosk on the casino floor at Hollywood Casino",
-    cardImage: A.pennCasinoFloor,
-    details: {
-      role: "Senior Product Designer",
-      industry: "Hospitality · Casino · Kiosk",
-      timeline: "1.5 years",
-      scope: "Product & UX/UI Design · Design System",
-    },
-    problem: {
-      label: "The Problem",
-      heading: "Most guests are 55+. Most kiosks weren't designed for them.",
-      body: [
-        "Penn Entertainment runs self-service kiosks on casino floors around the country, and most of the guests using them are 55 and up. A lot of them aren't comfortable with a touchscreen. So before I designed anything, I watched. I paired real usability testing with hours on the floor, just observing people use the machines. Every change I made came from something I actually saw trip someone up.",
-      ],
-      bullets: [
-        { text: "Balance display lacked clarity — guests confused about Gaming vs Non-Gaming balances." },
-        { text: "Back navigation broke flow — returning from a promo reset scroll position." },
-        { text: "Top menu placement blocked access — shorter guests couldn't reach the nav tabs." },
-        { text: "Start interaction was unclear — guests tried tapping instead of swiping their card." },
-        { text: "Download App banner misled — guests tapped it thinking it was a button." },
-        { text: "Multi-touch input caused missed taps — guests used palm taps, a habit from slot machines." },
-      ],
-    },
-    solution: {
-      label: "The Solution",
-      heading: "Seven fixes. All from watching real people use the machine.",
-      body: [
-        "That became seven fixes. A promo banner people kept mashing like a button, so I toned it down until it read as information. Buttons big enough to invite palm taps — a habit that comes right off the slot machines — so I sized them for a single finger. A menu sitting too high for shorter guests, so I dropped it to the bottom where everyone could reach it.",
-        "I gave engineering the full set, ranked by effort and impact so they'd know where to start. I also run the design system tying the kiosk, the Penn Host app, and the web together, so none of these fixes live in just one place.",
-      ],
-      images: [
-        { src: A.pennStyleGuide, alt: "PENN Entertainment kiosk design system one-sheeter" },
-      ],
-    },
-    beforeAfter: {
-      heading: "Before & After",
-      body: "The original interface stacked everything in a single column with a promotional banner that guests kept tapping like a button. The redesign introduced a two-column card grid, a bottom navigation bar reachable by everyone, and a clear visual hierarchy — so guests could find what they needed and act on it without confusion.",
-      before: { src: A.pennBefore, alt: "PENN Entertainment kiosk — before redesign" },
-      after: { src: A.pennAfter, alt: "PENN Entertainment kiosk — after redesign" },
-    },
-    metrics: [
-      { value: "97", label: "Color tokens in the design system" },
-      { value: "56", label: "Components built" },
-      { value: "128", label: "Component variants" },
-    ],
-    results: {
-      heading: "Validated on the floor. Shipped across the system.",
-      body: [
-        "The redesign was validated by the people who actually use the machines. Guests navigated faster, made fewer errors, and — critically — told us they noticed the difference. The design system that came out of this work now spans the kiosk, the Penn Host app, and the web, ensuring every touchpoint speaks the same visual language.",
-      ],
-    },
-    userQuote: {
-      quote: "Love how easy it was to use, much better than the old one.",
-      attribution: "Casino guest, Hollywood Casino at The Meadows",
-    },
-    featured: true,
-},
+
 ];
 
 // ─── PENN Entertainment ────────────────────────────────────────────────────
