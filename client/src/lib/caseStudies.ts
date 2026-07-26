@@ -52,7 +52,7 @@ export const caseStudies: CaseStudy[] = [
     hero: A.babcockHero,
     heroAlt:
       "Babcock Ranch website redesign — mobile-first homepage with lifestyle imagery and lead capture",
-    cardImage: A.babcockHero,
+    cardImage: A.babcockMobile2x,
     details: {
       role: "Lead Designer & Developer",
       industry: "Real Estate · Master-Planned Communities",
@@ -261,7 +261,6 @@ export const caseStudies: CaseStudy[] = [
         "The website redesign became the catalyst for Payology's entire digital ecosystem — establishing a scalable design system that now extends across its suite of financial applications, ensuring brand consistency and a seamless user experience everywhere customers touch the brand.",
       ],
     },
-    featured: true,
   },
   {
     slug: "payology-app",
@@ -280,6 +279,7 @@ export const caseStudies: CaseStudy[] = [
       industry: "Fintech · Enterprise SaaS",
       scope: "Product & UX/UI Design",
     },
+    featured: true,
     problem: {
       label: "The Problem",
       heading: "Designing a platform for complex financial workflows.",
