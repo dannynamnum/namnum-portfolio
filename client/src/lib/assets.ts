@@ -3,7 +3,7 @@
  * All images live on manus-storage CDN paths. Never reference local files.
  */
 export const A = {
-  logo: "/manus-storage/namnum-logo_8b40ec6d.svg",
+  logo: "/manus-storage/LogoIcon_b4e33db6.svg",
   headshot: "/manus-storage/danny-headshot_d243d915.jpg",
   // Babcock Ranch
   babcockHero: "/manus-storage/BabcockWebsite_bf2e117b.jpg",

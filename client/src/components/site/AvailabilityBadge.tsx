@@ -13,7 +13,7 @@ export function AvailabilityDot({ className = "" }: { className?: string }) {
 export function AvailabilityBadge({ dark = false }: { dark?: boolean }) {
   return (
     <a
-      href="https://fantastical.app/Namnum/Launch-Strategy"
+      href="https://fantastical.app/Namnum/Intro-conversation"
       target="_blank"
       rel="noopener noreferrer"
       className={`group inline-flex items-center gap-2.5 border px-4 py-2 transition-colors duration-200 ${

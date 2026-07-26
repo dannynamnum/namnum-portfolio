@@ -69,7 +69,7 @@ function Hero() {
             <ArrowRight className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
           <a
-            href="https://fantastical.app/Namnum/Launch-Strategy"
+            href="https://fantastical.app/Namnum/Intro-conversation"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 border border-paper/25 px-7 py-4 font-display font-semibold text-paper transition-colors duration-200 hover:bg-paper/10 active:scale-[0.97]"

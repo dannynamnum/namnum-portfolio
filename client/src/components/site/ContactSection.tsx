@@ -33,7 +33,7 @@ export function ContactSection() {
               tell you exactly how I'd approach it.
             </p>
             <a
-              href="https://fantastical.app/Namnum/Launch-Strategy"
+              href="https://fantastical.app/Namnum/Intro-conversation"
               target="_blank"
               rel="noopener noreferrer"
               className="group mt-9 inline-flex items-center gap-3 bg-coral px-7 py-4 text-white font-display font-semibold text-base transition-transform duration-200 hover:translate-y-[-2px] active:scale-[0.97]"

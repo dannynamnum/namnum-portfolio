@@ -55,7 +55,7 @@ export function Nav({ overDark = false }: { overDark?: boolean }) {
             </Link>
           ))}
           <a
-            href="https://fantastical.app/Namnum/Launch-Strategy"
+            href="https://fantastical.app/Namnum/Intro-conversation"
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-flex items-center gap-2.5 border px-4 py-2 transition-all duration-200 active:scale-[0.97] ${
@@ -94,7 +94,7 @@ export function Nav({ overDark = false }: { overDark?: boolean }) {
               </Link>
             ))}
             <a
-              href="https://fantastical.app/Namnum/Launch-Strategy"
+              href="https://fantastical.app/Namnum/Intro-conversation"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-3 inline-flex w-fit items-center gap-2.5 border border-ink/20 px-5 py-3 text-ink"
