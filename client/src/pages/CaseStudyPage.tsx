@@ -9,6 +9,7 @@ import { Nav } from "@/components/site/Nav";
 import { ContactSection } from "@/components/site/ContactSection";
 import { Reveal } from "@/components/site/Reveal";
 import { getCaseStudy, nextCaseStudy, type CaseStudySection } from "@/lib/caseStudies";
+import { A } from "@/lib/assets";
 
 function SectionBlock({
   section,
@@ -78,7 +79,7 @@ function SectionBlock({
                   src={img.src}
                   alt={img.alt}
                   loading="eager"
-                  className="w-full border border-ink/10 bg-white object-cover transition-transform duration-700"
+                  className="w-full max-h-[360px] border border-ink/10 bg-white object-cover object-top transition-transform duration-700"
                 />
                 {img.caption && (
                   <figcaption className="mt-2.5 font-meta text-[10px] text-ink/45">
@@ -126,7 +127,7 @@ export default function CaseStudyPage() {
             <img
               src={cs.hero}
               alt={cs.heroAlt}
-              className="w-full border border-ink/10 object-cover"
+              className="w-full max-h-[480px] border border-ink/10 object-cover object-center"
             />
           </div>
         </Reveal>
@@ -160,6 +161,34 @@ export default function CaseStudyPage() {
         <SectionBlock section={cs.problem} index="01" />
         <SectionBlock section={cs.solution} index="02" />
 
+        {/* PENN-specific: live user photo + style guide inline, small and contextual */}
+        {cs.slug === "penn-entertainment" && (
+          <div className="border-t border-ink/10 py-12 md:py-16">
+            <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-[1fr_2fr] items-start">
+                <Reveal as="figure">
+                  <img
+                    src={A.pennLiveUser}
+                    alt="Casino guest using the redesigned PENN Play kiosk"
+                    loading="eager"
+                    className="w-full max-h-[320px] object-cover object-top border border-ink/10"
+                  />
+                  <figcaption className="mt-2 font-meta text-[10px] text-ink/45">On-floor usability observation, Hollywood Casino at The Meadows</figcaption>
+                </Reveal>
+                <Reveal delay={80} as="figure">
+                  <img
+                    src={A.pennStyleGuide}
+                    alt="PENN Entertainment kiosk design system one-sheeter"
+                    loading="eager"
+                    className="w-full max-h-[320px] object-cover object-top border border-ink/10"
+                  />
+                  <figcaption className="mt-2 font-meta text-[10px] text-ink/45">Design system: 97 color tokens · 56 components · 128 variants · spans kiosk, app, and web</figcaption>
+                </Reveal>
+              </div>
+            </div>
+          </div>
+        )}
+
         {cs.beforeAfter && (
           <section className="border-t border-ink/10 bg-ink py-16 md:py-24 text-paper">
             <div className="mx-auto max-w-[1400px] px-5 md:px-10">
@@ -181,7 +210,7 @@ export default function CaseStudyPage() {
                     src={cs.beforeAfter.before.src}
                     alt={cs.beforeAfter.before.alt}
                     loading="eager"
-                    className="w-full border border-paper/15 object-cover opacity-85"
+                    className="w-full max-h-[420px] border border-paper/15 object-cover object-top opacity-85"
                   />
                 </Reveal>
                 <Reveal delay={90} as="figure">
@@ -190,7 +219,7 @@ export default function CaseStudyPage() {
                     src={cs.beforeAfter.after.src}
                     alt={cs.beforeAfter.after.alt}
                     loading="eager"
-                    className="w-full border border-paper/15 object-cover"
+                    className="w-full max-h-[420px] border border-paper/15 object-cover object-top"
                   />
                 </Reveal>
               </div>

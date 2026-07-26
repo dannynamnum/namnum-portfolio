@@ -441,9 +441,9 @@ export const caseStudies: CaseStudy[] = [
       "A field-research-driven redesign of casino floor kiosks used by millions of guests — backed by a design system spanning kiosk, app, and web.",
     industry: "Hospitality",
     filter: "fintech",
-    hero: A.pennLiveUser,
-    heroAlt: "A casino guest using a PENN Play kiosk on the casino floor",
-    cardImage: A.pennLiveUser,
+    hero: A.pennCasinoFloor,
+    heroAlt: "A PENN Play kiosk on the casino floor at Hollywood Casino",
+    cardImage: A.pennCasinoFloor,
     details: {
       role: "Senior Product Designer",
       industry: "Hospitality · Casino · Kiosk",
@@ -473,9 +473,7 @@ export const caseStudies: CaseStudy[] = [
         "I gave engineering the full set, ranked by effort and impact so they'd know where to start. I also run the design system tying the kiosk, the Penn Host app, and the web together, so none of these fixes live in just one place.",
       ],
       images: [
-        { src: A.pennAfter, alt: "PENN Entertainment kiosk redesign — after UI" },
         { src: A.pennStyleGuide, alt: "PENN Entertainment kiosk design system one-sheeter" },
-        { src: A.pennLiveUser, alt: "Casino guest using the redesigned PENN Play kiosk" },
       ],
     },
     beforeAfter: {

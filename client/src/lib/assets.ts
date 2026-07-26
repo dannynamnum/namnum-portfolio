@@ -50,4 +50,5 @@ export const A = {
   pennAfter: "/manus-storage/penn-after_2dc64c79.png",
   pennLiveUser: "/manus-storage/penn-liveuser_db78c5bf.webp",
   pennStyleGuide: "/manus-storage/penn-styleguide_511315da.png",
+  pennCasinoFloor: "/manus-storage/penn-casinofloor_0f1c73ef.webp",
 };
