@@ -45,4 +45,9 @@ export const A = {
   optionsCatalogIpad: "/manus-storage/OptionsCatalogiPadMockupv3_7d849238.webp",
   optionsCatalogRecording: "/manus-storage/OptionsCatalogScreenRecrding-poster_53b6ece3.jpg",
   kioskMockup: "/manus-storage/SalesCenterKioskMockup2web_8c7378ef.jpg",
+  // PENN Entertainment
+  pennBefore: "/manus-storage/penn-before_49ea0a6c.png",
+  pennAfter: "/manus-storage/penn-after_2dc64c79.png",
+  pennLiveUser: "/manus-storage/penn-liveuser_db78c5bf.webp",
+  pennStyleGuide: "/manus-storage/penn-styleguide_511315da.png",
 };

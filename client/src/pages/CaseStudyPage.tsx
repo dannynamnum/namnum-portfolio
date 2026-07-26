@@ -253,6 +253,19 @@ export default function CaseStudyPage() {
                 </blockquote>
               </Reveal>
             )}
+
+            {cs.userQuote && (
+              <Reveal className="mt-16">
+                <blockquote className="relative max-w-2xl border-l-2 border-coral pl-7 md:pl-10">
+                  <p className="font-display text-xl md:text-2xl font-medium leading-relaxed text-ink">
+                    "{cs.userQuote.quote}"
+                  </p>
+                  <footer className="mt-5">
+                    <p className="font-meta text-[11px] text-ink/50 uppercase tracking-widest">{cs.userQuote.attribution}</p>
+                  </footer>
+                </blockquote>
+              </Reveal>
+            )}
           </div>
         </section>
 

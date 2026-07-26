@@ -36,7 +36,13 @@ export interface CaseStudy {
   metrics?: { value: string; suffix?: string; label: string }[];
   results: { heading: string; body: string[] };
   testimonial?: { quote: string; name: string; title: string };
+  userQuote?: { quote: string; attribution: string };
   featured?: boolean;
+}
+// Optional user quote (no named attribution required)
+export interface UserQuote {
+  quote: string;
+  attribution: string;
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -370,7 +376,6 @@ export const caseStudies: CaseStudy[] = [
         "What started as a digital tool for a single community quickly became an essential part of the GL Homes sales experience — successfully implemented across 12 communities in 8 cities. It became more than a tool: a trusted part of the buyer journey, driving both satisfaction and revenue.",
       ],
     },
-    featured: true,
   },
   {
     slug: "options-catalog",
@@ -427,7 +432,78 @@ export const caseStudies: CaseStudy[] = [
       ],
     },
   },
+  {
+    slug: "penn-entertainment",
+    index: "07",
+    title: "PENN Entertainment",
+    headline: "Kiosks That Work for the People Who Actually Use Them.",
+    oneLiner:
+      "A field-research-driven redesign of casino floor kiosks used by millions of guests — backed by a design system spanning kiosk, app, and web.",
+    industry: "Hospitality",
+    filter: "fintech",
+    hero: A.pennLiveUser,
+    heroAlt: "A casino guest using a PENN Play kiosk on the casino floor",
+    cardImage: A.pennLiveUser,
+    details: {
+      role: "Senior Product Designer",
+      industry: "Hospitality · Casino · Kiosk",
+      timeline: "1.5 years",
+      scope: "Product & UX/UI Design · Design System",
+    },
+    problem: {
+      label: "The Problem",
+      heading: "Most guests are 55+. Most kiosks weren't designed for them.",
+      body: [
+        "Penn Entertainment runs self-service kiosks on casino floors around the country, and most of the guests using them are 55 and up. A lot of them aren't comfortable with a touchscreen. So before I designed anything, I watched. I paired real usability testing with hours on the floor, just observing people use the machines. Every change I made came from something I actually saw trip someone up.",
+      ],
+      bullets: [
+        { text: "Balance display lacked clarity — guests confused about Gaming vs Non-Gaming balances." },
+        { text: "Back navigation broke flow — returning from a promo reset scroll position." },
+        { text: "Top menu placement blocked access — shorter guests couldn't reach the nav tabs." },
+        { text: "Start interaction was unclear — guests tried tapping instead of swiping their card." },
+        { text: "Download App banner misled — guests tapped it thinking it was a button." },
+        { text: "Multi-touch input caused missed taps — guests used palm taps, a habit from slot machines." },
+      ],
+    },
+    solution: {
+      label: "The Solution",
+      heading: "Seven fixes. All from watching real people use the machine.",
+      body: [
+        "That became seven fixes. A promo banner people kept mashing like a button, so I toned it down until it read as information. Buttons big enough to invite palm taps — a habit that comes right off the slot machines — so I sized them for a single finger. A menu sitting too high for shorter guests, so I dropped it to the bottom where everyone could reach it.",
+        "I gave engineering the full set, ranked by effort and impact so they'd know where to start. I also run the design system tying the kiosk, the Penn Host app, and the web together, so none of these fixes live in just one place.",
+      ],
+      images: [
+        { src: A.pennAfter, alt: "PENN Entertainment kiosk redesign — after UI" },
+        { src: A.pennStyleGuide, alt: "PENN Entertainment kiosk design system one-sheeter" },
+        { src: A.pennLiveUser, alt: "Casino guest using the redesigned PENN Play kiosk" },
+      ],
+    },
+    beforeAfter: {
+      heading: "Before & After",
+      body: "The original interface stacked everything in a single column with a promotional banner that guests kept tapping like a button. The redesign introduced a two-column card grid, a bottom navigation bar reachable by everyone, and a clear visual hierarchy — so guests could find what they needed and act on it without confusion.",
+      before: { src: A.pennBefore, alt: "PENN Entertainment kiosk — before redesign" },
+      after: { src: A.pennAfter, alt: "PENN Entertainment kiosk — after redesign" },
+    },
+    metrics: [
+      { value: "97", label: "Color tokens in the design system" },
+      { value: "56", label: "Components built" },
+      { value: "128", label: "Component variants" },
+    ],
+    results: {
+      heading: "Validated on the floor. Shipped across the system.",
+      body: [
+        "The redesign was validated by the people who actually use the machines. Guests navigated faster, made fewer errors, and — critically — told us they noticed the difference. The design system that came out of this work now spans the kiosk, the Penn Host app, and the web, ensuring every touchpoint speaks the same visual language.",
+      ],
+    },
+    userQuote: {
+      quote: "Love how easy it was to use, much better than the old one.",
+      attribution: "Casino guest, Hollywood Casino at The Meadows",
+    },
+    featured: true,
+  },
 ];
+
+// ─── PENN Entertainment ────────────────────────────────────────────────────
 
 export const featuredStudies = caseStudies.filter((c) => c.featured);
 
