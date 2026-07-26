@@ -131,7 +131,7 @@ export const caseStudies: CaseStudy[] = [
       title: "CMO, Babcock Ranch",
     },
     featured: true,
-  },
+},
   {
     slug: "gl-homes",
     index: "02",
@@ -206,7 +206,7 @@ export const caseStudies: CaseStudy[] = [
       title: "Manager UX/UI & Digital Transformation, GL Homes",
     },
     featured: true,
-  },
+},
   {
     slug: "payology-website",
     index: "03",
@@ -285,7 +285,6 @@ export const caseStudies: CaseStudy[] = [
       industry: "Fintech · Enterprise SaaS",
       scope: "Product & UX/UI Design",
     },
-    featured: true,
     problem: {
       label: "The Problem",
       heading: "Designing a platform for complex financial workflows.",
@@ -324,7 +323,7 @@ export const caseStudies: CaseStudy[] = [
         "Designed with flexibility in mind, the Payology application became the foundation for the company's digital ecosystem — allowing enterprise clients to tailor their experiences while ensuring seamless scalability as the product suite grows.",
       ],
     },
-  },
+},
   {
     slug: "model-showcase",
     index: "05",
@@ -498,7 +497,7 @@ export const caseStudies: CaseStudy[] = [
       attribution: "Casino guest, Hollywood Casino at The Meadows",
     },
     featured: true,
-  },
+},
 ];
 
 // ─── PENN Entertainment ────────────────────────────────────────────────────
