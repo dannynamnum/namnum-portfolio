@@ -173,9 +173,6 @@ export const caseStudies: CaseStudy[] = [
         "That became seven fixes. A promo banner people kept mashing like a button, so I toned it down until it read as information. Buttons big enough to invite palm taps — a habit that comes right off the slot machines — so I sized them for a single finger. A menu sitting too high for shorter guests, so I dropped it to the bottom where everyone could reach it.",
         "I gave engineering the full set, ranked by effort and impact so they'd know where to start. I also run the design system tying the kiosk, the Penn Host app, and the web together, so none of these fixes live in just one place.",
       ],
-      images: [
-        { src: A.pennStyleGuide, alt: "PENN Entertainment kiosk design system one-sheeter" },
-      ],
     },
     beforeAfter: {
       heading: "Before & After",

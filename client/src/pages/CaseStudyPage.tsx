@@ -176,6 +176,21 @@ export default function CaseStudyPage() {
                   <figcaption className="mt-2 font-meta text-[10px] text-ink/45">Design system: 97 color tokens · 56 components · 128 variants · spans kiosk, app, and web</figcaption>
                 </Reveal>
               </div>
+              {/* Metrics directly below style guide — one visual unit */}
+              {cs.metrics && (
+                <div className="mt-8 grid gap-8 sm:grid-cols-3 max-w-2xl">
+                  {cs.metrics.map((m, i) => (
+                    <Reveal key={m.label} delay={i * 80}>
+                      <div className="border-l-2 border-coral pl-5">
+                        <p className="font-display text-5xl font-extrabold tracking-[-0.03em] text-ink">
+                          {m.value}
+                        </p>
+                        <p className="mt-1.5 font-meta text-[11px] text-ink/55">{m.label}</p>
+                      </div>
+                    </Reveal>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         )}
@@ -200,8 +215,8 @@ export default function CaseStudyPage() {
                   <img
                     src={cs.beforeAfter.before.src}
                     alt={cs.beforeAfter.before.alt}
-                    loading="eager"
-                    className="w-full max-h-[420px] border border-paper/15 object-cover object-top opacity-85"
+                  loading="eager"
+                    className="w-full border border-paper/15 object-contain opacity-85"
                   />
                 </Reveal>
                 <Reveal delay={90} as="figure">
@@ -210,7 +225,7 @@ export default function CaseStudyPage() {
                     src={cs.beforeAfter.after.src}
                     alt={cs.beforeAfter.after.alt}
                     loading="eager"
-                    className="w-full max-h-[420px] border border-paper/15 object-cover object-top"
+                    className="w-full border border-paper/15 object-contain"
                   />
                 </Reveal>
               </div>
@@ -224,6 +239,7 @@ export default function CaseStudyPage() {
         <section className="border-t border-ink/10 py-16 md:py-24">
           <div className="mx-auto max-w-[1400px] px-5 md:px-10">
             {cs.metrics && (
+              !cs.slug.startsWith("penn") &&
               <div className="mb-14 grid gap-8 sm:grid-cols-2 max-w-3xl">
                 {cs.metrics.map((m, i) => (
                   <Reveal key={m.label} delay={i * 80}>
