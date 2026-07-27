@@ -17,7 +17,7 @@ export function SectionLabel({
       <span
         className={`font-meta text-[11px] md:text-xs ${dark ? "text-paper/60" : "text-ink/55"}`}
       >
-        {index} — {children}
+        {index} · {children}
       </span>
     </div>
   );

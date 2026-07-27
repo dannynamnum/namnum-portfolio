@@ -82,7 +82,7 @@ function Hero() {
           className="hero-rise mt-16 font-meta text-[11px] text-paper/40"
           style={{ animationDelay: "540ms" }}
         >
-          Websites &amp; digital products — Real Estate · Hospitality · Fintech
+          Websites &amp; digital products · Real Estate · Hospitality · Fintech
         </p>
       </div>
     </section>
@@ -162,12 +162,12 @@ const outcomes = [
   {
     icon: Zap,
     title: "Fast and premium",
-    text: "Sites that load fast and look premium — because speed is the first thing a buyer feels.",
+    text: "Sites that load fast and look premium. Speed is the first thing a buyer feels.",
   },
   {
     icon: MessageSquare,
     title: "Leads that convert",
-    text: "Inquiries that actually turn into conversations — higher intent, not just higher volume.",
+    text: "Inquiries that actually turn into conversations. Higher intent, not just higher volume.",
   },
   {
     icon: Wrench,
@@ -248,7 +248,7 @@ function SocialProof() {
               </p>
               <footer className="mt-6">
                 <p className="font-display font-bold text-ink">Nicholas Parks</p>
-                <p className="font-meta text-[11px] text-ink/50 mt-1">CMO — Babcock Ranch</p>
+                <p className="font-meta text-[11px] text-ink/50 mt-1">CMO, Babcock Ranch</p>
               </footer>
             </blockquote>
           </Reveal>
@@ -263,7 +263,7 @@ function SocialProof() {
               <footer className="mt-6">
                 <p className="font-display font-bold text-ink">Mike San German</p>
                 <p className="font-meta text-[11px] text-ink/50 mt-1">
-                  Manager UX/UI &amp; Digital Transformation — GL Homes
+                  Manager UX/UI &amp; Digital Transformation, GL Homes
                 </p>
               </footer>
             </blockquote>
@@ -283,14 +283,14 @@ function WhatIDo() {
             <SectionLabel index="04">What I Do</SectionLabel>
           </Reveal>
           <Reveal delay={80}>
-            <p className="font-display text-[clamp(1.4rem,2.6vw,2rem)] font-semibold leading-snug tracking-[-0.015em] text-ink">
-              I design websites and digital products for real estate,
-              hospitality, and fintech companies. I take complex products and
-              make them simple, beautiful, and high-converting —{" "}
-              <span className="text-ink/45">
-                one senior partner from strategy through launch, no agency
+           <p className="font-display text-[clamp(1.4rem,2.6vw,2rem)] font-semibold leading-snug tracking-[-0.015em] text-ink">
+             I design websites and digital products for real estate,
+             hospitality, and fintech companies. I take complex products and
+              make them simple, beautiful, and high-converting.{" "}
+             <span className="text-ink/45">
+                One senior partner from strategy through launch, no agency
                 overhead.
-              </span>
+             </span>
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               {["Websites", "Digital Products", "Conversion Optimization"].map((k) => (

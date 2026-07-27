@@ -99,8 +99,8 @@ export function Nav({ overDark = false }: { overDark?: boolean }) {
               rel="noopener noreferrer"
               className="mt-3 inline-flex w-fit items-center gap-2.5 border border-ink/20 px-5 py-3 text-ink"
             >
-              <AvailabilityDot />
-              <span className="font-meta text-xs">Available — book a call</span>
+             <AvailabilityDot />
+              <span className="font-meta text-xs">Available · book a call</span>
             </a>
           </nav>
         </div>

@@ -13,13 +13,13 @@ import { ArrowRight } from "lucide-react";
 const credentials = [
   { value: "15+", label: "Years designing for major real estate developers and enterprise companies" },
   { value: "Stanford", label: "AI UX Certified" },
-  { value: "1", label: "Senior partner from strategy through launch — no agency layers, no handoffs" },
+  { value: "1", label: "One senior partner from strategy through launch. No agency layers, no handoffs." },
 ];
 
 const approach = [
   {
     title: "I simplify complexity",
-    text: "I take complex products — master-planned communities, financial platforms, customization tools with 1,299 options — and reduce them to simple, effective designs people actually use.",
+    text: "I take genuinely complex products: master-planned communities, financial platforms, customization tools with 1,299 options. I reduce them to simple, effective designs people actually use.",
   },
   {
     title: "I design for business goals",
@@ -27,7 +27,7 @@ const approach = [
   },
   {
     title: "I build, not just design",
-    text: "Design sensibility paired with strong technical ability. What I design, I can ship — which means nothing gets lost in translation.",
+    text: "Design sensibility paired with strong technical ability. What I design, I can ship. Nothing gets lost in translation.",
   },
 ];
 
@@ -54,19 +54,19 @@ export default function About() {
                   <p>
                     I'm Danny Namnum. For 15+ years I've designed websites and
                     digital products for major real estate developers and
-                    enterprise companies — including GL Homes, Babcock Ranch,
+                    enterprise companies: GL Homes, Babcock Ranch,
                     Lennar, and Payology.
                   </p>
                   <p>
                     My specialty is simplification. Master-planned communities,
                     financial platforms, home customization tools with over a
-                    thousand options — I take products that are genuinely
+                    thousand options. I take products that are genuinely
                     complex and make them feel effortless to the person on the
                     other side of the screen.
                   </p>
                   <p>
                     I work differently than an agency. When you hire me, you
-                    get me — one senior partner who handles strategy, design,
+                    get me. One senior partner who handles strategy, design,
                     and build end to end. No account managers, no junior
                     designers, no handoffs. Decisions get made in days, not
                     weeks, and the person who understood your business on day
@@ -74,8 +74,8 @@ export default function About() {
                   </p>
                   <p>
                     I work primarily with real estate, hospitality, and
-                    fintech companies — industries where the website isn't a
-                    brochure, it's a sales tool that has to earn its budget
+                    fintech companies. Industries where the website isn't a
+                    brochure. It's a sales tool that has to earn its budget
                     back.
                   </p>
                 </div>
@@ -88,7 +88,7 @@ export default function About() {
                   <span className="absolute -left-2 -top-2 h-5 w-5 bg-coral" aria-hidden="true" />
                   <img
                     src={A.headshot}
-                    alt="Danny Namnum — senior UX designer and website consultant"
+                    alt="Danny Namnum, senior UX designer and website consultant"
                     className="w-full border border-ink/10 object-cover"
                   />
                 </figure>

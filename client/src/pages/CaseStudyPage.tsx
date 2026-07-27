@@ -26,7 +26,7 @@ function SectionBlock({
             <div className="flex items-center gap-3">
               <span className="h-2 w-2 bg-coral shrink-0" aria-hidden="true" />
               <span className="font-meta text-[11px] md:text-xs text-ink/55">
-                {index} — {section.label}
+                {index} · {section.label}
               </span>
             </div>
           </Reveal>
@@ -202,7 +202,7 @@ export default function CaseStudyPage() {
                 <div className="flex items-center gap-3">
                   <span className="h-2 w-2 bg-coral shrink-0" aria-hidden="true" />
                   <span className="font-meta text-[11px] md:text-xs text-paper/60">
-                    03 — {cs.beforeAfter.heading}
+                    03 · {cs.beforeAfter.heading}
                   </span>
                 </div>
                 <p className="mt-6 max-w-2xl font-display text-xl md:text-2xl font-medium leading-relaxed">

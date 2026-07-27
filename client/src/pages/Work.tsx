@@ -31,10 +31,10 @@ export default function Work() {
             <h1 className="mt-5 max-w-3xl font-display text-[clamp(2.7rem,7vw,5.5rem)] font-extrabold leading-[0.95] tracking-[-0.035em] text-ink">
               Selected work<span className="text-coral">.</span>
             </h1>
-            <p className="mt-5 max-w-xl text-ink/60 md:text-lg leading-relaxed">
-              Websites and digital products for real estate, hospitality, and
-              fintech — each one built to convert.
-            </p>
+           <p className="mt-5 max-w-xl text-ink/60 md:text-lg leading-relaxed">
+             Websites and digital products for real estate, hospitality, and
+              fintech. Each one built to convert.
+           </p>
           </Reveal>
 
           <Reveal delay={100}>
