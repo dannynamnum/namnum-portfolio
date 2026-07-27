@@ -19,7 +19,7 @@ export interface CaseStudy {
   headline: string; // Editorial headline on detail page
   oneLiner: string;
   industry: string; // tag
-  filter: "real-estate" | "fintech";
+  tags: string[]; // multi-tag filter support
   hero: string;
   heroAlt: string;
   cardImage: string;
@@ -54,7 +54,7 @@ export const caseStudies: CaseStudy[] = [
     oneLiner:
       "A full redesign for America's first solar-powered town. Built to turn the community's story into qualified buyer leads.",
     industry: "Real Estate",
-    filter: "real-estate",
+    tags: ["real-estate"],
     hero: A.babcockHero,
     heroAlt:
       "Babcock Ranch website redesign, mobile-first homepage with lifestyle imagery and lead capture",
@@ -141,7 +141,7 @@ export const caseStudies: CaseStudy[] = [
     oneLiner:
       "A field-research-driven redesign of casino floor kiosks used by millions of guests. Backed by a design system spanning kiosk, app, and web.",
     industry: "Hospitality",
-    filter: "fintech",
+    tags: ["hospitality", "kiosks"],
     hero: A.pennCasinoFloor,
     heroAlt: "A PENN Play kiosk on the casino floor at Hollywood Casino",
     cardImage: A.pennCasinoFloor,
@@ -206,7 +206,7 @@ export const caseStudies: CaseStudy[] = [
     oneLiner:
       "A corporate website redesign for one of Florida's largest homebuilders. 30% lift in lead generation, 80% more mobile engagement.",
     industry: "Real Estate",
-    filter: "real-estate",
+    tags: ["real-estate"],
     hero: A.glHero,
     heroAlt: "GL Homes corporate website redesign shown across devices",
     cardImage: A.glHero,
@@ -282,7 +282,7 @@ export const caseStudies: CaseStudy[] = [
     oneLiner:
       "Payology's first-ever financial platform. A scalable foundation for its entire suite of enterprise products.",
     industry: "Fintech",
-    filter: "fintech",
+    tags: ["saas"],
     hero: A.payAppDark,
     heroAlt: "Payology enterprise application interface in dark mode",
     cardImage: A.payAppDark,
@@ -339,7 +339,7 @@ export const caseStudies: CaseStudy[] = [
     oneLiner:
       "A conversion-driven website and brand refresh that became the catalyst for Payology's entire digital ecosystem.",
     industry: "Fintech",
-    filter: "fintech",
+    tags: ["saas"],
     hero: A.payWebsiteMockup,
     heroAlt: "Payology corporate website shown across desktop, tablet, and mobile",
     cardImage: A.payWebsiteMockup,
@@ -401,7 +401,7 @@ export const caseStudies: CaseStudy[] = [
     oneLiner:
       "A touchscreen home-customization experience deployed across 12 communities in 8 cities. Turning model home inspiration into upgrade revenue.",
     industry: "PropTech",
-    filter: "real-estate",
+    tags: ["real-estate", "kiosks"],
     hero: A.modelShowcaseHero,
     heroAlt:
       "A homebuyer using the Model Showcase touchscreen kiosk to select exterior designs",
@@ -454,7 +454,7 @@ export const caseStudies: CaseStudy[] = [
     oneLiner:
       "A digital catalog that organized 1,299 home customization options into a clear, browsable experience buyers could explore on their own time.",
     industry: "PropTech",
-    filter: "real-estate",
+    tags: ["real-estate"],
     hero: A.optionsCatalogHero,
     heroAlt: "Options Catalog web application for home customization",
     cardImage: A.optionsCatalogHero,

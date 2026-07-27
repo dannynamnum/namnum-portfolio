@@ -14,12 +14,14 @@ import { caseStudies } from "@/lib/caseStudies";
 const filters = [
   { id: "all", label: "All" },
   { id: "real-estate", label: "Real Estate" },
-  { id: "fintech", label: "Fintech" },
+  { id: "hospitality", label: "Hospitality" },
+  { id: "saas", label: "SaaS" },
+  { id: "kiosks", label: "Kiosks" },
 ] as const;
 
 export default function Work() {
   const [filter, setFilter] = useState<(typeof filters)[number]["id"]>("all");
-  const shown = caseStudies.filter((c) => filter === "all" || c.filter === filter);
+  const shown = caseStudies.filter((c) => filter === "all" || c.tags.includes(filter));
 
   return (
     <div className="min-h-screen bg-paper">
