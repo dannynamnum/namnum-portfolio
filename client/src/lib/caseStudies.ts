@@ -120,6 +120,7 @@ export const caseStudies: CaseStudy[] = [
     results: {
       heading: "A website the marketing team trusted enough to reinvest in.",
       body: [
+        "80% of Babcock Ranch's traffic came from mobile devices, so the entire UX architecture was rebuilt mobile-first.",
         "After launch, the site shifted both the volume and the quality of inbound interest. Engagement climbed, mobile performance jumped, and the sales team started getting inquiries from buyers who were further along in their decision.",
         "The clearest measure of success wasn't a metric. It was the client's behavior after launch. Babcock Ranch renewed for ongoing site maintenance, then commissioned a dedicated luxury landing page for a more affluent buyer segment. Two reinvestments, same partner.",
       ],
@@ -188,6 +189,7 @@ export const caseStudies: CaseStudy[] = [
     results: {
       heading: "Validated on the floor. Shipped across the system.",
       body: [
+        "Seven usability issues were identified through in-person observation on the casino floor, leading to a complete kiosk interface redesign.",
         "The redesign was validated by the people who actually use the machines. Guests navigated faster, made fewer errors, and told us they noticed the difference. The design system that came out of this work now spans the kiosk, the Penn Host app, and the web.",
       ],
     },
@@ -261,7 +263,8 @@ export const caseStudies: CaseStudy[] = [
     results: {
       heading: "30% more leads from a clearer buying path.",
       body: [
-        "The redesigned site made it easier for buyers to explore communities, compare floorplans, and connect with sales teams. Better navigation, better lead capture, fully responsive. The numbers followed.m saw a 30% increase in lead submissions and significantly higher engagement.",
+        "The GL Homes website redesign delivered a 30% increase in lead generation and an 80% increase in mobile engagement.",
+        "The redesigned site made it easier for buyers to explore communities, compare floorplans, and connect with sales teams. Better navigation, better lead capture, fully responsive. The numbers followed: a 30% increase in lead submissions and significantly higher engagement.",
         "The design system made future updates straightforward. New pages and features fit in without starting over.",
       ],
     },
@@ -326,6 +329,7 @@ export const caseStudies: CaseStudy[] = [
         results: {
       heading: "The foundation of Payology's digital ecosystem.",
       body: [
+        "The Payology platform design scaled across an entire suite of enterprise financial applications, with white-label branding support for every client.",
         "The Payology application became the foundation for the company's digital ecosystem. Enterprise clients can tailor their experience, and the product suite has room to grow without a redesign.",
       ],
     },
@@ -440,6 +444,7 @@ export const caseStudies: CaseStudy[] = [
     results: {
       heading: "From pilot to essential sales tool.",
       body: [
+        "The GL Homes sales center kiosk reduced buyer decision time by 60%.",
         "The Model Showcase changed how buyers engaged with their selections and how the business closed upgrade sales. It boosted conversions by giving buyers a clear, visual way to explore high-ticket options, reduced decision fatigue, and gave the sales team a better tool.",
         "What started as a tool for one community became a standard part of the GL Homes sales experience, deployed across 12 communities in 8 cities.",
       ],

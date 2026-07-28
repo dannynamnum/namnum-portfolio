@@ -14,6 +14,12 @@ import { AvailabilityDot } from "@/components/site/AvailabilityBadge";
 import { featuredStudies } from "@/lib/caseStudies";
 import { Zap, MessageSquare, Wrench, Gem } from "lucide-react";
 import SEO from "@/components/site/SEO";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 function Hero() {
   return (
@@ -84,6 +90,18 @@ function Hero() {
           style={{ animationDelay: "540ms" }}
         >
           Websites &amp; digital products · Real Estate · Hospitality · Fintech
+        </p>
+
+        {/* Factual, AI-readable summary — subtle by design, fully crawlable */}
+        <p
+          className="hero-rise mt-5 max-w-2xl text-[13px] leading-relaxed text-paper/35"
+          style={{ animationDelay: "600ms" }}
+        >
+          Danny Namnum is a UX and website designer specializing in real estate
+          websites, interactive kiosks, and lead conversion optimization for
+          builders, brokerages, and hospitality brands. Based in South Florida,
+          he has designed digital experiences for Babcock Ranch, PENN
+          Entertainment, and GL Homes. Stanford AI UX Certified.
         </p>
       </div>
     </section>
@@ -294,7 +312,14 @@ function WhatIDo() {
              </span>
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              {["Websites", "Digital Products", "Conversion Optimization"].map((k) => (
+              {[
+                "Real Estate Website Design",
+                "Interactive Kiosk Design",
+                "Lead Conversion Optimization",
+                "Mobile-First UX Design",
+                "Hospitality Digital Experience Design",
+                "SaaS/App Design",
+              ].map((k) => (
                 <span
                   key={k}
                   className="border border-ink/15 px-4 py-2 font-meta text-[11px] text-ink/70"
@@ -310,9 +335,79 @@ function WhatIDo() {
   );
 }
 
+const faqs = [
+  {
+    q: "What types of websites do you design?",
+    a: "I design websites for real estate brokerages, home builders, and hospitality brands. My focus is on lead conversion, mobile-first UX, and performance optimization for high-traffic real estate sites.",
+  },
+  {
+    q: "Do you design interactive kiosks?",
+    a: "Yes. I've designed kiosks for PENN Entertainment's casino floors and GL Homes' sales centers. My kiosk work focuses on usability for all ages, reducing decision time, and turning passive displays into engagement tools.",
+  },
+  {
+    q: "How much does a real estate website redesign cost?",
+    a: "A full brokerage or builder website rebuild typically ranges from $50K to $85K depending on scope, integrations, and number of communities. Smaller lead-capture projects start lower.",
+  },
+  {
+    q: "Where are you located?",
+    a: "I'm based in South Florida and work with clients nationwide. Most of my real estate and hospitality clients are in Florida.",
+  },
+  {
+    q: "What makes your approach different?",
+    a: "I watch real users interact with the product before designing solutions. Every recommendation comes from observed behavior, not assumptions. This approach led to a 60% reduction in buyer decision time at GL Homes.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
+function FAQ() {
+  return (
+    <section className="border-t border-ink/10 bg-paper py-20 md:py-28">
+      <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.3fr] lg:gap-20">
+          <Reveal>
+            <SectionLabel index="05">FAQ</SectionLabel>
+            <h2 className="mt-5 font-display text-[clamp(2rem,4vw,3.25rem)] font-extrabold leading-[0.98] tracking-[-0.03em] text-ink">
+              Common questions<span className="text-coral">.</span>
+            </h2>
+          </Reveal>
+          <Reveal delay={80}>
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((f, i) => (
+                <AccordionItem key={f.q} value={`faq-${i}`} className="border-ink/10">
+                  <AccordionTrigger className="text-left font-display text-base md:text-lg font-bold text-ink hover:no-underline hover:text-coral [&>svg]:text-coral">
+                    {f.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-ink/65 text-sm md:text-base leading-relaxed">
+                    {f.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-paper">
+      <SEO
+        title="Danny Namnum — UX & Website Design for Real Estate, Hospitality & Fintech"
+        description="Danny Namnum designs websites and kiosks for real estate builders, brokers, and hospitality brands. 15+ years of UX. Stanford AI UX Certified."
+        ogUrl="/"
+        jsonLd={faqJsonLd}
+      />
       <Nav overDark />
       <main>
         <Hero />
@@ -320,6 +415,7 @@ export default function Home() {
         <Outcomes />
         <SocialProof />
         <WhatIDo />
+        <FAQ />
       </main>
       <ContactSection />
     </div>
