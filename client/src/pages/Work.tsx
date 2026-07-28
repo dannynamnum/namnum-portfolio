@@ -3,6 +3,7 @@
  * Light page, editorial list of all six case studies with industry filter.
  */
 import { useState } from "react";
+import SEO from "@/components/site/SEO";
 import { Link } from "wouter";
 import { ArrowUpRight } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
@@ -20,11 +21,17 @@ const filters = [
 ] as const;
 
 export default function Work() {
+  // SEO rendered at top of return
   const [filter, setFilter] = useState<(typeof filters)[number]["id"]>("all");
   const shown = caseStudies.filter((c) => filter === "all" || c.tags.includes(filter));
 
   return (
     <div className="min-h-screen bg-paper">
+      <SEO
+        title="Portfolio — Real Estate & Kiosk Design Work"
+        description="Case studies in real estate website design, kiosk UX, fintech apps, and hospitality. See how better design drives real business outcomes."
+        ogUrl="/work"
+      />
       <Nav />
       <main className="pt-28 md:pt-40">
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">

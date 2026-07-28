@@ -8,6 +8,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { SectionLabel } from "@/components/site/SectionLabel";
 import { A } from "@/lib/assets";
 import { Link } from "wouter";
+import SEO from "@/components/site/SEO";
 import { ArrowRight } from "lucide-react";
 
 const credentials = [
@@ -34,6 +35,12 @@ const approach = [
 export default function About() {
   return (
     <div className="min-h-screen bg-paper">
+      <SEO
+        title="About Danny Namnum — Fractional Head of UX"
+        description="15+ years designing websites and digital products. Stanford AI UX Certified. One senior partner — no agency layers, no handoffs."
+        ogUrl="/about"
+        ogImage="https://namnum.net/assets/danny-headshot.jpg"
+      />
       <Nav />
       <main className="pt-28 md:pt-40">
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">

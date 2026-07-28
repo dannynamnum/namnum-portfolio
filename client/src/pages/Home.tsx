@@ -13,6 +13,7 @@ import { SectionLabel } from "@/components/site/SectionLabel";
 import { AvailabilityDot } from "@/components/site/AvailabilityBadge";
 import { featuredStudies } from "@/lib/caseStudies";
 import { Zap, MessageSquare, Wrench, Gem } from "lucide-react";
+import SEO from "@/components/site/SEO";
 
 function Hero() {
   return (

@@ -6,6 +6,7 @@
 import { Link, useParams, Redirect } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
+import SEO from "@/components/site/SEO";
 import { ContactSection } from "@/components/site/ContactSection";
 import { Reveal } from "@/components/site/Reveal";
 import { getCaseStudy, nextCaseStudy, type CaseStudySection } from "@/lib/caseStudies";
@@ -95,6 +96,45 @@ function SectionBlock({
   );
 }
 
+
+const SEO_META: Record<string, { title: string; description: string; ogImage?: string }> = {
+  "babcock-ranch": {
+    title: "Babcock Ranch Website Redesign — Danny Namnum",
+    description: "How a full website rebuild for a solar-powered master-planned community drove 30% more qualified leads. Real estate website design case study.",
+    ogImage: "https://namnum.net/assets/MobileWebDesign2x.jpg",
+  },
+  "gl-homes": {
+    title: "GL Homes Website — Builder Lead Generation Design",
+    description: "Redesigning GL Homes' website to convert more buyers. Real estate lead generation website design for a major Florida home builder.",
+    ogImage: "https://namnum.net/assets/GLHomesMockup.jpg",
+  },
+  "penn-entertainment": {
+    title: "PENN Entertainment Kiosk UX — Danny Namnum",
+    description: "Redesigning casino kiosk interfaces for PENN Entertainment. Hospitality kiosk UX and design system case study across 43 properties.",
+    ogImage: "https://namnum.net/assets/penn-casinofloor.webp",
+  },
+  "model-showcase": {
+    title: "Real Estate Kiosk Design — Model Showcase App",
+    description: "Interactive property kiosk for real estate sales centers. Helping buyers explore floor plans and options at the point of sale.",
+    ogImage: "https://namnum.net/assets/SalesCenterKioskMockup2web.jpg",
+  },
+  "payology-app": {
+    title: "Payology App UX — Fintech Design Case Study",
+    description: "Redesigning a fintech payment platform's UX to reduce friction and improve conversion. SaaS app design case study.",
+    ogImage: "https://namnum.net/assets/webapp-dark.jpg",
+  },
+  "payology-website": {
+    title: "Payology Website — SaaS & Fintech UX Design",
+    description: "Website redesign for a fintech company. Cleaner messaging, stronger conversion paths, and a design system built to scale.",
+    ogImage: "https://namnum.net/assets/PayologyAfter.jpg",
+  },
+  "options-catalog": {
+    title: "Options Catalog — Home Customization UX",
+    description: "Simplifying a 1,299-option home customization tool into a clear, guided buying experience for a major real estate developer.",
+    ogImage: "https://namnum.net/assets/OptionsCatalogiPadMockupv3.webp",
+  },
+};
+
 export default function CaseStudyPage() {
   const { slug } = useParams<{ slug: string }>();
   const cs = getCaseStudy(slug ?? "");
@@ -103,6 +143,17 @@ export default function CaseStudyPage() {
 
   return (
     <div className="min-h-screen bg-paper">
+      {cs && (() => {
+        const m = SEO_META[cs.slug] || {};
+        return (
+          <SEO
+            title={m.title || `${cs.title} — Danny Namnum`}
+            description={m.description || cs.oneLiner}
+            ogUrl={`/work/${cs.slug}`}
+            ogImage={m.ogImage}
+          />
+        );
+      })()}
       <Nav />
       <main className="pt-16 md:pt-[72px]">
         {/* Title block */}
