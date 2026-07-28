@@ -89,6 +89,9 @@ export function ContactSection() {
             <Link href="/work" className="font-meta text-[11px] text-paper/50 hover:text-paper transition-colors">
               Work
             </Link>
+            <Link href="/insights" className="font-meta text-[11px] text-paper/50 hover:text-paper transition-colors">
+              Insights
+            </Link>
             <Link href="/about" className="font-meta text-[11px] text-paper/50 hover:text-paper transition-colors">
               About
             </Link>
@@ -98,4 +101,3 @@ export function ContactSection() {
     </footer>
   );
 }
-

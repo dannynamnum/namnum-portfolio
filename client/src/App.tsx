@@ -8,6 +8,8 @@ import { HelmetProvider } from "react-helmet-async";
 import Home from "./pages/Home";
 import Work from "./pages/Work";
 import CaseStudyPage from "./pages/CaseStudyPage";
+import Insights from "./pages/Insights";
+import BlogPostPage from "./pages/BlogPostPage";
 import About from "./pages/About";
 import { useEffect } from "react";
 import { useLocation } from "wouter";
@@ -28,6 +30,8 @@ function Router() {
         <Route path={"/"} component={Home} />
         <Route path={"/work"} component={Work} />
         <Route path={"/work/:slug"} component={CaseStudyPage} />
+        <Route path={"/insights"} component={Insights} />
+        <Route path={"/insights/:slug"} component={BlogPostPage} />
         <Route path={"/about"} component={About} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
