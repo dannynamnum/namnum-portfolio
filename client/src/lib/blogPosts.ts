@@ -28,9 +28,9 @@ export const blogPosts: BlogPost[] = [
     readTime: "3 min read",
     excerpt:
       "Babcock Ranch wasn't just selling homes. They were selling the idea of an entire self-sustaining city. The website had to match that ambition. It didn't.",
-    image: "/assets/blog-post1-babcock.jpg",
+    image: "/assets/MobileWebDesign2x.jpg",
     imageAlt:
-      "Before and after comparison of the Babcock Ranch website redesign",
+      "Mobile web design mockup for Babcock Ranch website",
     seoTitle: "Rebuilding Babcock Ranch's Digital Experience",
     seoDescription:
       "How a full UX rebuild turned a master-planned community's real estate website into a conversion engine. Builder website UX lessons from Babcock Ranch.",
