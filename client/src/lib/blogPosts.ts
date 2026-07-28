@@ -15,11 +15,44 @@ export interface BlogPost {
   imageAlt: string;
   seoTitle: string;
   seoDescription: string;
-  /** Each string is a paragraph. Strings starting with "## " render as subheads. */
+  /** Each string is a paragraph. */
   body: string[];
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "nobody-had-watched-real-people-use-it",
+    title: "Nobody Had Watched Real People Use It. So I Did.",
+    category: "Kiosks",
+    date: "2026-07-28",
+    readTime: "3 min read",
+    excerpt:
+      "Every mockup looked clean. Everyone had signed off. But no one on the project had gone to watch an actual guest use one. So I volunteered.",
+    image: "/assets/blog-post6-penn-kiosk.webp",
+    imageAlt:
+      "A casino guest reaching up to tap a PENN Play kiosk touchscreen",
+    seoTitle: "Nobody Had Watched Real People Use It. So I Did.",
+    seoDescription:
+      "How spending a day on a casino floor watching real guests use PENN Entertainment kiosks uncovered seven fixes no desk review ever would have found.",
+    body: [
+      "Nobody had watched real people use it. So I did.",
+      "I was redesigning the kiosks for PENN Entertainment.",
+      "Every mockup looked clean. Everyone had signed off. But no one on the project had gone to watch an actual guest use one.",
+      "So I volunteered.",
+      "I spent a day on a casino floor, just watching.",
+      "Most guests were 55 and up. A lot of them weren't comfortable with a touchscreen. And the problems I'd never have caught from my desk were everywhere.",
+      "People tapped a banner that wasn't a button, then waited for something to happen.",
+      "The buttons were so big, folks hit them with a full palm. A habit carried straight over from the slot machines.",
+      "Shorter guests couldn't reach the menu at the top.",
+      "The very first screen made people freeze before they'd even started.",
+      "I came back with seven fixes. Every one came from something I watched happen, not something I assumed.",
+      "Move the menu down to where hands already are. Shrink the buttons so one finger does the job. Make the banner read as information, not a target.",
+      "Here's my read: you don't find those problems on a screen or in a meeting.",
+      "You find them by watching a real person, in the room, with their own hands.",
+      "I did the same for GL Homes, the kiosks in their sales offices. Watch the buyer walk up, see where they stall, fix it.",
+      "Casino floor or sales gallery, it doesn't change.",
+    ],
+  },
   {
     slug: "rebuilding-babcock-ranch-digital-experience",
     title: "Rebuilding Babcock Ranch's Digital Experience",
@@ -29,8 +62,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Babcock Ranch wasn't just selling homes. They were selling the idea of an entire self-sustaining city. The website had to match that ambition. It didn't.",
     image: "/assets/MobileWebDesign2x.jpg",
-    imageAlt:
-      "Mobile web design mockup for Babcock Ranch website",
+    imageAlt: "Mobile web design mockup for Babcock Ranch website",
     seoTitle: "Rebuilding Babcock Ranch's Digital Experience",
     seoDescription:
       "How a full UX rebuild turned a master-planned community's real estate website into a conversion engine. Builder website UX lessons from Babcock Ranch.",
@@ -81,8 +113,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "The biggest risk in a new neighborhood launch isn't speed. It's sequencing. Execution often starts before the brand direction is clear enough to guide decisions.",
     image: "/assets/blog-post3-sequencing.jpg",
-    imageAlt:
-      "A leadership team in discussion around a conference table",
+    imageAlt: "A leadership team in discussion around a conference table",
     seoTitle: "The Biggest Risk in a New Neighborhood Launch",
     seoDescription:
       "Real estate brand strategy for neighborhood launches: why sequencing beats speed, and how a clear north star prevents costly rework downstream.",
