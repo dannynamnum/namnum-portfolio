@@ -97,11 +97,11 @@ function Hero() {
           className="hero-rise mt-5 max-w-2xl text-[13px] leading-relaxed text-paper/35"
           style={{ animationDelay: "600ms" }}
         >
-          Danny Namnum is a UX and website designer specializing in real estate
-          websites, interactive kiosks, and lead conversion optimization for
-          builders, brokerages, and hospitality brands. Based in South Florida,
-          he has designed digital experiences for Babcock Ranch, PENN
-          Entertainment, and GL Homes. Stanford AI UX Certified.
+          I'm a UX and website designer specializing in real estate websites,
+          interactive kiosks, and lead conversion optimization for builders,
+          brokerages, and hospitality brands. Based in South Florida, I've
+          designed digital experiences for Babcock Ranch, PENN Entertainment,
+          and GL Homes. Stanford AI UX Certified.
         </p>
       </div>
     </section>
