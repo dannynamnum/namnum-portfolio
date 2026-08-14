@@ -11,8 +11,8 @@ export interface BlogPost {
   date: string;
   readTime: string;
   excerpt: string;
-  image: string;
-  imageAlt: string;
+  image?: string;
+  imageAlt?: string;
   seoTitle: string;
   seoDescription: string;
   /** Each string is a paragraph. */
@@ -20,6 +20,123 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "what-makes-a-real-estate-website-convert-visitors-into-leads",
+    title: "What Makes a Real Estate Website Actually Convert Visitors Into Leads?",
+    category: "Real Estate",
+    date: "2026-08-14",
+    readTime: "3 min read",
+    excerpt:
+      "Most real estate websites get traffic. Very few turn that traffic into conversations. Here's what actually moves the needle.",
+    seoTitle: "What Makes a Real Estate Website Convert?",
+    seoDescription:
+      "Five real estate website conversion principles that turn traffic into leads, from buyer-intent navigation to mobile performance and right-sized CTAs.",
+    body: [
+      "Most real estate websites get traffic. Very few turn that traffic into conversations.",
+      "I've worked on websites for brokerages, builders, and master-planned communities. The pattern is always the same. The site looks good. The listings are there. The traffic numbers are fine. But the phone doesn't ring and the contact forms sit empty.",
+      "Here's what I've found actually moves the needle.",
+      "## The homepage isn't a brochure. It's a decision point.",
+      "Most real estate homepages try to show everything. Every community, every listing type, every agent. The visitor lands and has to figure out where they fit.",
+      "That's friction. And friction kills conversion.",
+      "The fix is simple: give people a clear path based on how they think. Not by price range. Not by MLS number. By intent. Are you relocating? Looking for waterfront? Downsizing? Each of those is a different buyer with a different journey.",
+      "When I rebuilt the Babcock Ranch website, we reorganized the entire navigation around lifestyle and neighborhood, not square footage. 80% of their traffic was mobile and the old site made people pinch and scroll through desktop-era menus. Once we matched the structure to how buyers actually think, the site became their most effective sales asset.",
+      "## The CTA has to match the commitment level.",
+      "\"Schedule a showing\" is a big ask for someone who just found you on Google. They're not ready. They're researching.",
+      "You need CTAs at different commitment levels:",
+      "• Low commitment: \"Get the neighborhood guide\" or \"See what's available in [community]\"",
+      "• Medium commitment: A quick quiz or intake that matches them with the right agent or area",
+      "• High commitment: \"Book a call\" or \"Schedule a tour\"",
+      "Most sites only have the high-commitment option. That means 90% of visitors leave without doing anything.",
+      "## Speed matters more than you think.",
+      "A real estate site is image-heavy by nature. Buyers want to see photos. But if your page takes 4+ seconds to load on a phone, you've already lost them.",
+      "This isn't about cutting photos. It's about how you serve them. Lazy loading, proper compression, modern formats. The site should feel fast even when it's showing 30 high-res images.",
+      "## Nobody trusts a site that looks like every other site.",
+      "If your website uses the same IDX template as 500 other brokerages, buyers don't feel like they're working with a premium brand. They feel like they're on a search engine with your logo slapped on top.",
+      "The brokerages that convert well have sites that feel like their brand. The typography, the photography style, the way information is presented. It all signals: this is a team that pays attention to detail.",
+      "## The bottom line.",
+      "Traffic without conversion is just a vanity metric. If your site gets 10,000 visits a month and generates 5 leads, the problem isn't SEO. The problem is what happens after someone arrives.",
+      "I help real estate brands figure out exactly where visitors drop off and what to do about it. If your site has traffic but no leads, that's a solvable problem.",
+    ],
+  },
+  {
+    slug: "how-to-choose-the-right-real-estate-website-builder",
+    title: "How Do I Choose the Right Real Estate Website Builder?",
+    category: "Real Estate",
+    date: "2026-08-14",
+    readTime: "3 min read",
+    excerpt:
+      "The platform matters less than the strategy behind it. Here's what a brokerage, builder, or team should actually evaluate before choosing a real estate website builder.",
+    seoTitle: "How to Choose a Real Estate Website Builder",
+    seoDescription:
+      "A practical guide to choosing the right real estate website builder, including custom WordPress, Squarespace, IDX, CRM integration, and all-in-one platforms.",
+    body: [
+      "This is the wrong question. But I'll answer it anyway.",
+      "The reason it's the wrong question: the platform matters less than the strategy behind it. I've seen beautiful sites on WordPress that generate zero leads, and ugly sites on Squarespace that book showings every week. The difference is never the tool. It's the thinking.",
+      "That said, here's how I'd frame the decision if you're a brokerage, builder, or team choosing a platform.",
+      "## What you actually need to evaluate.",
+      "Forget the feature comparison charts. Every platform has \"IDX integration\" and \"mobile responsive\" on their list. That's table stakes. Here's what actually matters:",
+      "Can you customize the buyer journey? Most template platforms give you a homepage, a listings page, and a contact form. That's it. If you can't build custom landing pages for specific communities, create neighborhood guides, or design intake flows that qualify leads before they hit your CRM, you're going to outgrow the platform in 6 months.",
+      "Who maintains it? If you pick a custom WordPress build and your developer disappears, you're stuck. If you pick Squarespace and need something beyond what the templates allow, you're stuck. The right answer depends on whether you have someone in-house who can manage updates or whether you need a partner.",
+      "Does it integrate with your CRM? This is where most decisions fall apart. Your website should push leads directly into Follow Up Boss, Salesforce, or whatever system your agents actually use. If there's a manual step between \"visitor fills out form\" and \"agent gets notified,\" you're losing leads.",
+      "## My recommendation for most brokerages.",
+      "WordPress with a custom theme (not a purchased template) and Elementor for content editing. Here's why:",
+      "• Your marketing team can update pages without calling a developer",
+      "• It integrates with every CRM and IDX provider on the market",
+      "• You own the code and the hosting, so you're never locked in",
+      "• It scales from 10 pages to 10,000 without breaking",
+      "For smaller teams or individual agents, Squarespace or a similar managed platform is fine. You don't need the complexity. But for a brokerage with multiple offices, hundreds of agents, and community-specific landing pages, you need the flexibility of a custom build.",
+      "## What about the all-in-one real estate platforms?",
+      "Platforms like kvCORE, Sierra Interactive, and Luxury Presence offer \"everything in one place.\" They're convenient. But convenience comes with trade-offs:",
+      "• You look like every other brokerage using the same platform",
+      "• Customization is limited to what their system allows",
+      "• You're renting, not owning. If you leave, you start over.",
+      "• The monthly fees add up to more than a custom build over 2-3 years",
+      "For a luxury brokerage that needs to stand out, I'd avoid these. For a team that just needs something functional fast, they're fine.",
+      "## The real question to ask.",
+      "Don't ask \"which platform should I use?\" Ask \"what do I need my website to do for my business in 12 months?\" Then work backward from there.",
+      "If the answer is \"generate 50 qualified leads per month from organic traffic,\" that's a strategy conversation, not a platform conversation. The platform is just the tool that executes the strategy.",
+    ],
+  },
+  {
+    slug: "do-i-need-a-personal-website-if-my-brokerage-already-has-one",
+    title: "Do I Need a Personal Website If My Brokerage Already Has One?",
+    category: "Real Estate",
+    date: "2026-08-14",
+    readTime: "3 min read",
+    excerpt:
+      "A brokerage site positions the brokerage, not you. Here's when an agent's personal website becomes a practical business asset.",
+    seoTitle: "Do Real Estate Agents Need a Personal Website?",
+    seoDescription:
+      "When a real estate agent needs a personal website despite having a brokerage page, what the site should include, and when the investment makes sense.",
+    body: [
+      "Short answer: it depends on what you're trying to build.",
+      "If you're happy being one of 200 agents on your brokerage's site, and your leads come from the brokerage's marketing, and you plan to stay at that brokerage forever, then no. You don't need your own site.",
+      "But if any of the following are true, the answer changes:",
+      "## You want to be known for something specific.",
+      "Your brokerage site positions the brokerage. Not you. If you specialize in waterfront condos, luxury new construction, or a specific community, your brokerage's site isn't going to tell that story for you.",
+      "A personal site lets you own a niche. When someone Googles \"waterfront condos Boca Raton agent,\" your brokerage's generic agent directory page isn't going to rank. A dedicated page on your own site, with your content and your expertise, might.",
+      "## You might move brokerages someday.",
+      "This happens more than people admit. And when it does, you lose your agent page, your reviews, your content, and whatever SEO equity that page built up. It's gone.",
+      "Your own domain is yours. It follows you regardless of where you hang your license.",
+      "## You want leads that come to you, not leads assigned to you.",
+      "Brokerage websites generate leads for the brokerage. Those leads get distributed by a manager. You might get them, you might not.",
+      "Your own site generates leads for you. They come in with your name attached. No round-robin, no fighting over who gets the next inquiry.",
+      "## What a personal agent site actually needs.",
+      "It doesn't need to be complicated. The basics:",
+      "• A clear statement of who you serve and where",
+      "• Your active listings (can pull from IDX)",
+      "• 2-3 neighborhood or community guides (this is what ranks on Google)",
+      "• Social proof: testimonials, transaction history, awards",
+      "• A way to contact you that goes directly to you",
+      "You don't need a blog with 50 articles about \"5 tips for first-time homebuyers.\" You need a few pages that are genuinely useful to the specific buyer you want to attract.",
+      "## The investment.",
+      "A personal agent site doesn't need to cost $20K. A clean, fast, well-structured site on Squarespace or a simple WordPress setup can be done for $3-5K. The ROI comes from the leads it generates that you wouldn't have gotten otherwise.",
+      "If you close one additional deal per year because someone found your site, that's $10-15K in commission from a $3K investment. The math works.",
+      "## When it doesn't make sense.",
+      "If you're brand new, have no niche, and no content to put on a site, wait. Build your reputation first. A personal site amplifies what's already there. It doesn't create something from nothing.",
+      "But if you've been in the business 3+ years, have a specialty, and want to grow beyond what your brokerage's marketing provides, your own site is one of the best investments you can make.",
+    ],
+  },
   {
     slug: "nobody-had-watched-real-people-use-it",
     title: "Nobody Had Watched Real People Use It. So I Did.",
