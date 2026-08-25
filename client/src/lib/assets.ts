@@ -34,7 +34,7 @@ export const A = {
   payAppDark: "/assets/webapp-dark.jpg",
   payAppIpads: "/assets/ipads.webp",
   payMenuBeforeAfter: "/assets/menu-before-after.jpg",
-  payAppAnimation: "/assets/payology-webapp-animation.gif",
+  payAppAnimation: "/assets/payology-webapp-animation-optimized.gif",
   // Model Showcase
   modelShowcaseHero: "/assets/modelShowcase.jpg",
   modelShowcaseMobile: "/assets/mobileV2.webp",
@@ -47,7 +47,7 @@ export const A = {
   kioskMockup: "/assets/SalesCenterKioskMockup2web.jpg",
   // PENN Entertainment
   pennBefore: "/assets/penn-before.png",
-  pennAfter: "/assets/penn-after.png",
+  pennAfter: "/assets/penn-after.webp",
   pennLiveUser: "/assets/penn-liveuser.webp",
   pennStyleGuide: "/assets/penn-styleguide.png",
   pennCasinoFloor: "/assets/penn-casinofloor.webp",
