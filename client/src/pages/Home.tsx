@@ -373,38 +373,37 @@ function FAQ() {
     <section
       id="faq"
       aria-labelledby="faq-heading"
-      className="scroll-mt-24 border-y border-ink/10 bg-[#f1eee8] py-20 md:py-28"
+      className="scroll-mt-24 border-t border-paper/15 bg-ink py-20 text-paper md:py-28"
     >
       <div className="mx-auto max-w-[1400px] px-5 md:px-10">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.3fr] lg:gap-20">
           <div>
-            <SectionLabel index="05">FAQ</SectionLabel>
+            <SectionLabel index="05" dark>FAQ</SectionLabel>
             <h2
               id="faq-heading"
-              className="mt-5 font-display text-[clamp(2rem,4vw,3.25rem)] font-extrabold leading-[0.98] tracking-[-0.03em] text-ink"
+              className="mt-5 font-display text-[clamp(2.25rem,4vw,3.5rem)] font-extrabold leading-[0.98] tracking-[-0.03em]"
             >
-              Common questions<span className="text-coral">.</span>
+              Questions before we
+              <br />
+              talk<span className="text-coral">.</span>
             </h2>
-            <p className="mt-5 max-w-sm text-sm leading-relaxed text-ink/60 md:text-base">
-              Straight answers about websites, kiosks, and how I work.
+            <p className="mt-5 max-w-sm text-sm leading-relaxed text-paper/55 md:text-base">
+              Straight answers about the work, approach, and investment.
             </p>
           </div>
           <div>
             <Accordion
-              type="multiple"
-              defaultValue={faqs.map((_, i) => `faq-${i}`)}
-              className="w-full"
+              type="single"
+              collapsible
+              defaultValue="faq-0"
+              className="w-full border-t border-paper/15"
             >
               {faqs.map((f, i) => (
-                <AccordionItem
-                  key={f.q}
-                  value={`faq-${i}`}
-                  className="border-ink/10"
-                >
-                  <AccordionTrigger className="text-left font-display text-base font-bold text-ink hover:no-underline hover:text-coral md:text-lg [&>svg]:text-coral">
+                <AccordionItem key={f.q} value={`faq-${i}`} className="border-paper/15">
+                  <AccordionTrigger className="py-5 text-left font-display text-base font-bold text-paper hover:no-underline hover:text-coral md:text-lg [&>svg]:text-coral">
                     {f.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-sm leading-relaxed text-ink/65 md:text-base">
+                  <AccordionContent className="pb-5 text-sm leading-relaxed text-paper/60 md:text-base">
                     {f.a}
                   </AccordionContent>
                 </AccordionItem>

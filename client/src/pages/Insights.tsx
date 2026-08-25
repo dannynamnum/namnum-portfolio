@@ -51,14 +51,29 @@ export default function Insights() {
               >
                 <Link href={`/insights/${post.slug}`} className="group block">
                   <div className="overflow-hidden bg-ink/5">
-                    <img
-                      src={post.image}
-                      alt={post.imageAlt}
-                      loading={i === 0 ? "eager" : "lazy"}
-                      className={`w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.025] ${
-                        i === 0 ? "aspect-[16/8.5]" : "aspect-[4/3]"
-                      }`}
-                    />
+                    {post.image ? (
+                      <img
+                        src={post.image}
+                        alt={post.imageAlt ?? ""}
+                        loading={i === 0 ? "eager" : "lazy"}
+                        className={`w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.025] ${
+                          i === 0 ? "aspect-[16/8.5]" : "aspect-[4/3]"
+                        }`}
+                      />
+                    ) : (
+                      <div
+                        className={`relative overflow-hidden bg-gradient-to-br from-ink via-ink to-coral/80 p-6 text-paper transition-transform duration-700 ease-out group-hover:scale-[1.025] ${
+                          i === 0 ? "aspect-[16/8.5] md:p-10" : "aspect-[4/3]"
+                        }`}
+                        aria-label={`${post.category} insight`}
+                        role="img"
+                      >
+                        <div className="absolute -right-10 -top-10 h-40 w-40 border border-paper/20" />
+                        <div className="absolute bottom-0 left-[45%] h-3/4 w-px rotate-[26deg] bg-paper/20" />
+                        <span className="relative font-meta text-[11px] tracking-[0.12em] text-paper/60">REAL ESTATE / INSIGHT</span>
+                        <span className="absolute bottom-6 left-6 font-display text-xl font-extrabold leading-none md:bottom-10 md:left-10 md:text-3xl">Danny Namnum<span className="text-coral">.</span></span>
+                      </div>
+                    )}
                   </div>
                   <div className="mt-5 flex items-start justify-between gap-4">
                     <div>

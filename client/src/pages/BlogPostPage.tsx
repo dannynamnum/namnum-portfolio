@@ -30,7 +30,7 @@ export default function BlogPostPage() {
     "@type": "BlogPosting",
     headline: post.title,
     description: post.seoDescription,
-    image: `https://namnum.net${post.image}`,
+    ...(post.image ? { image: `https://namnum.net${post.image}` } : {}),
     datePublished: post.date,
     author: {
       "@type": "Person",
@@ -46,7 +46,7 @@ export default function BlogPostPage() {
         title={post.seoTitle}
         description={post.seoDescription}
         ogUrl={`/insights/${post.slug}`}
-        ogImage={`https://namnum.net${post.image}`}
+        ogImage={post.image ? `https://namnum.net${post.image}` : undefined}
         ogType="article"
         jsonLd={jsonLd}
       />
@@ -79,11 +79,26 @@ export default function BlogPostPage() {
         {/* Featured image */}
         <Reveal>
           <div className="mx-auto max-w-[1400px] px-5 md:px-10">
-            <img
-              src={post.image}
-              alt={post.imageAlt}
-              className="w-full max-h-[540px] border border-ink/10 object-cover object-top"
-            />
+            {post.image ? (
+              <img
+                src={post.image}
+                alt={post.imageAlt ?? ""}
+                className="w-full max-h-[540px] border border-ink/10 object-cover object-top"
+              />
+            ) : (
+              <div
+                className="relative flex aspect-[16/8.5] max-h-[540px] items-end overflow-hidden border border-ink/10 bg-gradient-to-br from-ink via-ink to-coral/80 p-7 text-paper md:p-12"
+                aria-label={`${post.category} insight`}
+                role="img"
+              >
+                <div className="absolute -right-10 -top-10 h-48 w-48 border border-paper/20" />
+                <div className="absolute right-[36%] top-[-20%] h-[150%] w-px rotate-[26deg] bg-paper/20" />
+                <div>
+                  <span className="font-meta text-[11px] tracking-[0.12em] text-paper/60">REAL ESTATE / INSIGHT</span>
+                  <p className="mt-3 font-display text-3xl font-extrabold tracking-[-0.025em] md:text-5xl">Danny Namnum<span className="text-coral">.</span></p>
+                </div>
+              </div>
+            )}
           </div>
         </Reveal>
 
@@ -91,18 +106,24 @@ export default function BlogPostPage() {
         <article className="mx-auto max-w-[720px] px-5 md:px-0 pt-12 md:pt-16 pb-16 md:pb-24">
           <Reveal>
             <div className="space-y-6">
-              {post.body.map((para, i) => (
-                <p
-                  key={i}
-                  className={
-                    i === 0
-                      ? "text-ink text-lg md:text-xl leading-relaxed font-medium"
-                      : "text-ink/75 text-base md:text-lg leading-relaxed"
-                  }
-                >
-                  {para}
-                </p>
-              ))}
+              {post.body.map((para, i) =>
+                para.startsWith("## ") ? (
+                  <h2 key={i} className="pt-5 font-display text-2xl font-extrabold leading-tight tracking-[-0.02em] text-ink md:text-3xl">
+                    {para.slice(3)}
+                  </h2>
+                ) : (
+                  <p
+                    key={i}
+                    className={
+                      i === 0
+                        ? "text-ink text-lg md:text-xl leading-relaxed font-medium"
+                        : "text-ink/75 text-base md:text-lg leading-relaxed"
+                    }
+                  >
+                    {para}
+                  </p>
+                ),
+              )}
             </div>
           </Reveal>
 
