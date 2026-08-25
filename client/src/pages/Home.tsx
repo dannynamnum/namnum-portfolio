@@ -97,11 +97,11 @@ function Hero() {
           className="hero-rise mt-5 max-w-2xl text-[13px] leading-relaxed text-paper/35"
           style={{ animationDelay: "600ms" }}
         >
-          Danny Namnum is a UX and website designer specializing in real estate
-          websites, interactive kiosks, and lead conversion optimization for
-          builders, brokerages, and hospitality brands. Based in South Florida,
-          he has designed digital experiences for Babcock Ranch, PENN
-          Entertainment, and GL Homes. Stanford AI UX Certified.
+          I'm a UX and website designer specializing in real estate websites,
+          interactive kiosks, and lead conversion optimization for builders,
+          brokerages, and hospitality brands. Based in South Florida, I've
+          designed digital experiences for Babcock Ranch, PENN Entertainment,
+          and GL Homes. Stanford AI UX Certified.
         </p>
       </div>
     </section>
@@ -370,29 +370,47 @@ const faqJsonLd = {
 
 function FAQ() {
   return (
-    <section className="border-t border-ink/10 bg-paper py-20 md:py-28">
+    <section
+      id="faq"
+      aria-labelledby="faq-heading"
+      className="scroll-mt-24 border-y border-ink/10 bg-[#f1eee8] py-20 md:py-28"
+    >
       <div className="mx-auto max-w-[1400px] px-5 md:px-10">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.3fr] lg:gap-20">
-          <Reveal>
+          <div>
             <SectionLabel index="05">FAQ</SectionLabel>
-            <h2 className="mt-5 font-display text-[clamp(2rem,4vw,3.25rem)] font-extrabold leading-[0.98] tracking-[-0.03em] text-ink">
+            <h2
+              id="faq-heading"
+              className="mt-5 font-display text-[clamp(2rem,4vw,3.25rem)] font-extrabold leading-[0.98] tracking-[-0.03em] text-ink"
+            >
               Common questions<span className="text-coral">.</span>
             </h2>
-          </Reveal>
-          <Reveal delay={80}>
-            <Accordion type="single" collapsible className="w-full">
+            <p className="mt-5 max-w-sm text-sm leading-relaxed text-ink/60 md:text-base">
+              Straight answers about websites, kiosks, and how I work.
+            </p>
+          </div>
+          <div>
+            <Accordion
+              type="multiple"
+              defaultValue={faqs.map((_, i) => `faq-${i}`)}
+              className="w-full"
+            >
               {faqs.map((f, i) => (
-                <AccordionItem key={f.q} value={`faq-${i}`} className="border-ink/10">
-                  <AccordionTrigger className="text-left font-display text-base md:text-lg font-bold text-ink hover:no-underline hover:text-coral [&>svg]:text-coral">
+                <AccordionItem
+                  key={f.q}
+                  value={`faq-${i}`}
+                  className="border-ink/10"
+                >
+                  <AccordionTrigger className="text-left font-display text-base font-bold text-ink hover:no-underline hover:text-coral md:text-lg [&>svg]:text-coral">
                     {f.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-ink/65 text-sm md:text-base leading-relaxed">
+                  <AccordionContent className="text-sm leading-relaxed text-ink/65 md:text-base">
                     {f.a}
                   </AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
-          </Reveal>
+          </div>
         </div>
       </div>
     </section>
