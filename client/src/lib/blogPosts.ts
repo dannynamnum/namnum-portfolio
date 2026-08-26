@@ -22,6 +22,11 @@ export interface BlogPost {
     href: string;
     description: string;
   };
+  relatedInsight?: {
+    label: string;
+    href: string;
+    description: string;
+  };
 }
 
 export const blogPosts: BlogPost[] = [
@@ -71,6 +76,11 @@ export const blogPosts: BlogPost[] = [
       "If you need a simple personal site that establishes your niche and generates direct inquiries, keep the scope focused. If you need a brokerage or builder site that supports multiple communities, lead sources, and teams, budget for the strategy and infrastructure that make that possible.",
       "The cheapest website is not the one with the lowest proposal. It is the one that does its job without needing to be rebuilt a year later.",
     ],
+    relatedInsight: {
+      label: "Keep reading: How to choose the right website builder",
+      href: "/insights/how-to-choose-the-right-real-estate-website-builder",
+      description: "The platform matters less than the strategy behind it. Here is what to evaluate before choosing one.",
+    },
     relatedWork: {
       label: "See the Babcock Ranch case study",
       href: "/work/babcock-ranch",
@@ -177,6 +187,11 @@ export const blogPosts: BlogPost[] = [
       "Start with the path that matters most. Help the right person find the right information, understand the opportunity, and take the next step. Then add features when the evidence says they will improve that path.",
       "The best real estate website is not the one with the longest feature list. It is the one that removes the most uncertainty for the people you want to work with.",
     ],
+    relatedInsight: {
+      label: "Keep reading: What makes a website convert?",
+      href: "/insights/what-makes-a-real-estate-website-convert-visitors-into-leads",
+      description: "How buyer intent, mobile UX, speed, and right-sized CTAs turn traffic into conversations.",
+    },
     relatedWork: {
       label: "See the Babcock Ranch case study",
       href: "/work/babcock-ranch",
@@ -222,6 +237,11 @@ export const blogPosts: BlogPost[] = [
       "Traffic without conversion is just a vanity metric. If your site gets 10,000 visits a month and generates 5 leads, the problem isn't SEO. The problem is what happens after someone arrives.",
       "I help real estate brands figure out exactly where visitors drop off and what to do about it. If your site has traffic but no leads, that's a solvable problem.",
     ],
+    relatedInsight: {
+      label: "Keep reading: What features should every website have?",
+      href: "/insights/what-features-should-every-real-estate-website-have",
+      description: "A practical checklist for the features that help real estate buyers find, trust, and contact you.",
+    },
   },
   {
     slug: "how-to-choose-the-right-real-estate-website-builder",
@@ -263,6 +283,11 @@ export const blogPosts: BlogPost[] = [
       "Don't ask \"which platform should I use?\" Ask \"what do I need my website to do for my business in 12 months?\" Then work backward from there.",
       "If the answer is \"generate 50 qualified leads per month from organic traffic,\" that's a strategy conversation, not a platform conversation. The platform is just the tool that executes the strategy.",
     ],
+    relatedInsight: {
+      label: "Keep reading: Do you need a personal website?",
+      href: "/insights/do-i-need-a-personal-website-if-my-brokerage-already-has-one",
+      description: "When your brokerage site is not enough, and what an agent-owned website should actually do.",
+    },
   },
   {
     slug: "do-i-need-a-personal-website-if-my-brokerage-already-has-one",
@@ -305,9 +330,14 @@ export const blogPosts: BlogPost[] = [
       "If you're brand new, have no niche, and no content to put on a site, wait. Build your reputation first. A personal site amplifies what's already there. It doesn't create something from nothing.",
       "But if you've been in the business 3+ years, have a specialty, and want to grow beyond what your brokerage's marketing provides, your own site is one of the best investments you can make.",
     ],
+    relatedInsight: {
+      label: "Keep reading: Can you build it yourself?",
+      href: "/insights/can-i-build-my-own-real-estate-website-without-technical-skills",
+      description: "A practical look at DIY platforms, hidden time costs, and when outside UX help makes sense.",
+    },
   },
   {
-    slug: "nobody-had-watched-real-people-use-it",
+    slug: "nobody-had_watched-real-people-use-it",
     title: "Nobody Had Watched Real People Use It. So I Did.",
     category: "Kiosks",
     date: "2026-07-28",
