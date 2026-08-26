@@ -143,6 +143,27 @@ export default function BlogPostPage() {
               </div>
             </div>
           </Reveal>
+
+          {post.relatedWork && (
+            <Reveal>
+              <div className="mt-12 border-y border-ink/10 py-7">
+                <p className="font-meta text-[10px] uppercase tracking-[0.14em] text-ink/45">Related work</p>
+                <Link href={post.relatedWork.href} className="group mt-3 block">
+                  <div className="flex items-start justify-between gap-5">
+                    <div>
+                      <h2 className="font-display text-2xl font-extrabold tracking-[-0.02em] text-ink transition-colors duration-300 group-hover:text-coral md:text-3xl">
+                        {post.relatedWork.label}
+                      </h2>
+                      <p className="mt-2 max-w-xl text-base leading-relaxed text-ink/65">
+                        {post.relatedWork.description}
+                      </p>
+                    </div>
+                    <ArrowUpRight className="mt-1 h-5 w-5 shrink-0 text-coral transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </div>
+                </Link>
+              </div>
+            </Reveal>
+          )}
         </article>
 
         {/* Next post */}

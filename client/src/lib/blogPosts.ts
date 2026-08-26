@@ -17,6 +17,11 @@ export interface BlogPost {
   seoDescription: string;
   /** Each string is a paragraph. */
   body: string[];
+  relatedWork?: {
+    label: string;
+    href: string;
+    description: string;
+  };
 }
 
 export const blogPosts: BlogPost[] = [
@@ -66,6 +71,11 @@ export const blogPosts: BlogPost[] = [
       "If you need a simple personal site that establishes your niche and generates direct inquiries, keep the scope focused. If you need a brokerage or builder site that supports multiple communities, lead sources, and teams, budget for the strategy and infrastructure that make that possible.",
       "The cheapest website is not the one with the lowest proposal. It is the one that does its job without needing to be rebuilt a year later.",
     ],
+    relatedWork: {
+      label: "See the Babcock Ranch case study",
+      href: "/work/babcock-ranch",
+      description: "A large-scale real estate website rebuilt around buyer decisions, mobile behavior, and qualified leads.",
+    },
   },
   {
     slug: "can-i-build-my-own-real-estate-website-without-technical-skills",
@@ -111,6 +121,11 @@ export const blogPosts: BlogPost[] = [
       "That gives you a site you can maintain without asking a developer to change every sentence, but it avoids the most common DIY mistake: building a polished version of the wrong experience.",
       "Start small if small is enough. Get help when the site becomes part of the sales system, not just a digital business card.",
     ],
+    relatedWork: {
+      label: "See the GL Homes case study",
+      href: "/work/gl-homes",
+      description: "A real estate experience designed to make complex decisions easier in the sales center and online.",
+    },
   },
   {
     slug: "what-features-should-every-real-estate-website-have",
@@ -162,6 +177,11 @@ export const blogPosts: BlogPost[] = [
       "Start with the path that matters most. Help the right person find the right information, understand the opportunity, and take the next step. Then add features when the evidence says they will improve that path.",
       "The best real estate website is not the one with the longest feature list. It is the one that removes the most uncertainty for the people you want to work with.",
     ],
+    relatedWork: {
+      label: "See the Babcock Ranch case study",
+      href: "/work/babcock-ranch",
+      description: "A master-planned community website rebuilt to turn a bigger brand story into a clearer buyer journey.",
+    },
   },
   {
     slug: "what-makes-a-real-estate-website-convert-visitors-into-leads",
