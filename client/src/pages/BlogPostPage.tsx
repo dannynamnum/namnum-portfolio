@@ -3,6 +3,7 @@
  * Clean, typographically focused reading layout. Narrow measure,
  * generous leading, large featured image, next-post footer link.
  */
+import { Fragment } from "react";
 import SEO from "@/components/site/SEO";
 import { Link, Redirect, useParams } from "wouter";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
@@ -106,24 +107,37 @@ export default function BlogPostPage() {
         <article className="mx-auto max-w-[720px] px-5 md:px-0 pt-12 md:pt-16 pb-16 md:pb-24">
           <Reveal>
             <div className="space-y-6">
-              {post.body.map((para, i) =>
-                para.startsWith("## ") ? (
-                  <h2 key={i} className="pt-5 font-display text-2xl font-extrabold leading-tight tracking-[-0.02em] text-ink md:text-3xl">
-                    {para.slice(3)}
-                  </h2>
-                ) : (
-                  <p
-                    key={i}
-                    className={
-                      i === 0
-                        ? "text-ink text-lg md:text-xl leading-relaxed font-medium"
-                        : "text-ink/75 text-base md:text-lg leading-relaxed"
-                    }
-                  >
-                    {para}
-                  </p>
-                ),
-              )}
+              {post.body.map((para, i) => {
+                const inlineLink = post.inlineLinks?.find((link) => link.after === para);
+                return (
+                  <Fragment key={i}>
+                    {para.startsWith("## ") ? (
+                      <h2 className="pt-5 font-display text-2xl font-extrabold leading-tight tracking-[-0.02em] text-ink md:text-3xl">
+                        {para.slice(3)}
+                      </h2>
+                    ) : (
+                      <p
+                        className={
+                          i === 0
+                            ? "text-ink text-lg md:text-xl leading-relaxed font-medium"
+                            : "text-ink/75 text-base md:text-lg leading-relaxed"
+                        }
+                      >
+                        {para}
+                      </p>
+                    )}
+                    {inlineLink && (
+                      <Link
+                        href={inlineLink.href}
+                        className="group inline-flex items-center gap-2 border-b border-coral/40 pb-1 font-meta text-[11px] uppercase tracking-[0.12em] text-ink/70 transition-colors hover:border-coral hover:text-coral"
+                      >
+                        {inlineLink.label}
+                        <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      </Link>
+                    )}
+                  </Fragment>
+                );
+              })}
             </div>
           </Reveal>
 

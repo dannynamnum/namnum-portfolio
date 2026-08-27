@@ -27,6 +27,11 @@ export interface BlogPost {
     href: string;
     description: string;
   };
+  inlineLinks?: {
+    after: string;
+    label: string;
+    href: string;
+  }[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -187,11 +192,13 @@ export const blogPosts: BlogPost[] = [
       "Start with the path that matters most. Help the right person find the right information, understand the opportunity, and take the next step. Then add features when the evidence says they will improve that path.",
       "The best real estate website is not the one with the longest feature list. It is the one that removes the most uncertainty for the people you want to work with.",
     ],
-    relatedInsight: {
-      label: "Keep reading: What makes a website convert?",
-      href: "/insights/what-makes-a-real-estate-website-convert-visitors-into-leads",
-      description: "How buyer intent, mobile UX, speed, and right-sized CTAs turn traffic into conversations.",
-    },
+    inlineLinks: [
+      {
+        after: "One CTA repeated across every page is not a conversion strategy. It is a shortcut.",
+        label: "Read more about designing CTAs around user intent →",
+        href: "/insights/what-makes-a-real-estate-website-convert-visitors-into-leads",
+      },
+    ],
     relatedWork: {
       label: "See the Babcock Ranch case study",
       href: "/work/babcock-ranch",
