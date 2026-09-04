@@ -196,6 +196,8 @@ export const blogPosts: BlogPost[] = [
     seoTitle: "Real Estate Website Cost: What Should You Budget?",
     seoDescription:
       "How much does a professional real estate website cost? A practical breakdown of website budgets for agents, teams, builders, and brokerages.",
+    image: "/assets/insight-real-estate-website-cost.webp",
+    imageAlt: "Real estate website investment discussion with a budget presentation for an agent, team, brokerage, or builder.",
     body: [
       "The honest answer is: it depends on what the site has to do.",
       "A personal agent website and a multi-community builder platform are both real estate websites. They are not the same project, and they should not have the same budget.",
@@ -253,6 +255,8 @@ export const blogPosts: BlogPost[] = [
     seoTitle: "Can You Build a Real Estate Website Yourself?",
     seoDescription:
       "Can you build your own real estate website without technical skills? A practical guide to DIY platforms, trade-offs, and when to bring in a designer.",
+    image: "/assets/insight-diy-real-estate-website.webp",
+    imageAlt: "Real estate professional reviewing a website builder and planning a DIY website launch.",
     body: [
       "Yes, you can build a real estate website without being technical.",
       "The tools are easier to use than they used to be. You can choose a template, add your logo, connect a domain, and publish something that works on a phone in a weekend.",
@@ -303,6 +307,8 @@ export const blogPosts: BlogPost[] = [
     seoTitle: "Essential Features for a Real Estate Website",
     seoDescription:
       "What features should every real estate website have? A practical checklist covering listings, communities, mobile UX, lead capture, CRM, and performance.",
+    image: "/assets/insight-real-estate-website-features.webp",
+    imageAlt: "Home buyer researching a real estate website on a laptop in a bright waterfront home.",
     body: [
       "A professional real estate website does not need every feature.",
       "It needs the right features in the right order, for the right buyer.",
