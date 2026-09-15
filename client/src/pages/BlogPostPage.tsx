@@ -20,6 +20,14 @@ function formatDate(iso: string) {
   });
 }
 
+
+/** Body lines written as ![alt](src "caption") render as a figure. */
+function parseFigure(para: string) {
+  const m = para.match(/^!\[(.*?)\]\((\S+?)(?:\s+"(.*?)")?\)$/);
+  if (!m) return null;
+  return { alt: m[1], src: m[2], caption: m[3] };
+}
+
 export default function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
   const post = getBlogPost(slug ?? "");
@@ -109,9 +117,24 @@ export default function BlogPostPage() {
             <div className="space-y-6">
               {post.body.map((para, i) => {
                 const inlineLink = post.inlineLinks?.find((link) => link.after === para);
+                const figure = parseFigure(para);
                 return (
                   <Fragment key={i}>
-                    {para.startsWith("## ") ? (
+                    {figure ? (
+                      <figure className="pt-2 pb-2">
+                        <img
+                          src={figure.src}
+                          alt={figure.alt}
+                          loading="lazy"
+                          className="w-full border border-ink/10"
+                        />
+                        {figure.caption && (
+                          <figcaption className="mt-3 font-meta text-[11px] leading-relaxed tracking-[0.04em] text-ink/50">
+                            {figure.caption}
+                          </figcaption>
+                        )}
+                      </figure>
+                    ) : para.startsWith("## ") ? (
                       <h2 className="pt-5 font-display text-2xl font-extrabold leading-tight tracking-[-0.02em] text-ink md:text-3xl">
                         {para.slice(3)}
                       </h2>
