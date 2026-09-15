@@ -24,13 +24,18 @@ export function Reveal({
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          if (e.isIntersecting) {
+          if (!e.isIntersecting) return;
+          // Blocks taller than the viewport (long article bodies) can never
+          // reach a 12% ratio on a phone, so reveal those as soon as they enter.
+          const viewportH = e.rootBounds?.height ?? window.innerHeight;
+          const tall = e.boundingClientRect.height > viewportH;
+          if (tall || e.intersectionRatio >= 0.12) {
             setShown(true);
             io.disconnect();
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -6% 0px" },
+      { threshold: [0, 0.12], rootMargin: "0px 0px -6% 0px" },
     );
     io.observe(el);
     return () => io.disconnect();
