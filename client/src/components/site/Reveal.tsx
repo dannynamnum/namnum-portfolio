@@ -17,6 +17,9 @@ export function Reveal({
 }) {
   const ref = useRef<HTMLElement | null>(null);
   const [shown, setShown] = useState(false);
+  // Tall blocks are shown without the fade-up so they never shift under an
+  // in-progress scroll.
+  const [instant, setInstant] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
@@ -30,6 +33,7 @@ export function Reveal({
           const viewportH = e.rootBounds?.height ?? window.innerHeight;
           const tall = e.boundingClientRect.height > viewportH;
           if (tall || e.intersectionRatio >= 0.12) {
+            if (tall) setInstant(true);
             setShown(true);
             io.disconnect();
           }
@@ -46,7 +50,13 @@ export function Reveal({
       // @ts-expect-error dynamic tag ref
       ref={ref}
       className={`${shown ? "reveal-in" : "reveal-init"} ${className}`}
-      style={shown && delay ? { transitionDelay: `${delay}ms` } : undefined}
+      style={
+        instant
+          ? { transition: "none" }
+          : shown && delay
+            ? { transitionDelay: `${delay}ms` }
+            : undefined
+      }
     >
       {children}
     </Tag>
