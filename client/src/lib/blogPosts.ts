@@ -13,6 +13,8 @@ export interface BlogPost {
   excerpt: string;
   image?: string;
   imageAlt?: string;
+  imageFit?: "cover" | "contain";
+  imageAspectRatio?: number;
   seoTitle: string;
   seoDescription: string;
   /** Each string is a paragraph. */
@@ -43,6 +45,10 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     excerpt:
       "How to build buyer interest before opening day with useful early information, a clear next step for serious buyers, and a plan for reaching neighbors.",
+    image: "/assets/grand-opening-sales-center.webp",
+    imageAlt: "A sales team reviewing a community floor plan with a buyer at a model-home sales center.",
+    imageFit: "contain",
+    imageAspectRatio: 1060 / 706,
     seoTitle: "How to Build Buyer Interest Before a New Community Opens",
     seoDescription:
       "Learn how a new-home community can build buyer interest before opening day with useful early information, a clear next step, and outreach to neighbors.",

@@ -87,12 +87,20 @@ export default function BlogPostPage() {
 
         {/* Featured image */}
         <Reveal>
-          <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+          <div
+            className={`mx-auto max-w-[1400px] px-5 md:px-10 ${
+              post.imageFit === "contain" ? "flex justify-center" : ""
+            }`}
+          >
             {post.image ? (
               <img
                 src={post.image}
                 alt={post.imageAlt ?? ""}
-                className="w-full max-h-[540px] border border-ink/10 object-cover object-top"
+                className={`border border-ink/10 ${
+                  post.imageFit === "contain"
+                    ? "block max-h-[min(75vh,44rem)] max-w-full w-auto object-contain"
+                    : "w-full max-h-[540px] object-cover object-top"
+                }`}
               />
             ) : (
               <div

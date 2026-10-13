@@ -56,7 +56,10 @@ export default function Insights() {
                         src={post.image}
                         alt={post.imageAlt ?? ""}
                         loading={i === 0 ? "eager" : "lazy"}
-                        className={`w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.025] ${
+                        style={post.imageAspectRatio ? { aspectRatio: post.imageAspectRatio } : undefined}
+                        className={`w-full transition-transform duration-700 ease-out group-hover:scale-[1.025] ${
+                          post.imageFit === "contain" ? "object-contain" : "object-cover object-top"
+                        } ${
                           i === 0 ? "aspect-[16/8.5]" : "aspect-[4/3]"
                         }`}
                       />
