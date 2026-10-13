@@ -36,6 +36,40 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "how-to-build-buyer-interest-before-a-new-community-opens",
+    title: "How to Build Buyer Interest Before a New Community Opens",
+    category: "Real Estate / Community Launch",
+    date: "2026-10-13",
+    readTime: "4 min read",
+    excerpt:
+      "How to build buyer interest before opening day with useful early information, a clear next step for serious buyers, and a plan for reaching neighbors.",
+    seoTitle: "How to Build Buyer Interest Before a New Community Opens",
+    seoDescription:
+      "Learn how a new-home community can build buyer interest before opening day with useful early information, a clear next step, and outreach to neighbors.",
+    body: [
+      "A new-home community can start selling before its model homes are ready. I saw this firsthand at GL Homes. By opening day, many buyers already knew which floor plan they wanted. Some had been following the community for months, before they had a model to walk through.",
+      "Opening day matters, but it is not where buyer interest starts.",
+      "## Give people something useful before there is much to show.",
+      "The first page I built for one community was a coming-soon page. It shared the location, the types of homes planned, an expected price range, and a form to express interest. There were no finished homes to photograph, but people signed up.",
+      "Over the months that followed, we kept the list informed as the community took shape. When construction began on the clubhouse, we shared a photo. When the entrance went in, we shared that progress too. We also explained what was nearby. Our communities were often close to popular destinations, but not in them, so each launch needed to make the case for its location.",
+      "You do not need a finished community to give people a reason to pay attention. You need useful information and a clear way to stay connected.",
+      "## Give buyers a next step when they are ready.",
+      "For this launch, buyers could put down a $1,000 deposit for first pick of the lots. I built the page that accepted the deposits and helped shape how the process would work.",
+      "The deposits came in week after week, from people who had seen renderings and early construction photos, sometimes just a hole in the ground. A rendering can get someone interested. A deposit shows they are ready to make a decision.",
+      "## Build for the people who can shape the project, too.",
+      "The first website I built for this community was not for buyers. The land was a run-down golf course in Boca Raton, and the residents in the neighboring community had a say in what would happen there. The city also had to approve the project.",
+      "The site explained the plan to the neighbors. Residents could read a support letter and sign it online. An email system sent each signed letter to the city on their behalf. There were no floor plans or prices on the site.",
+      "The project was approved. The neighborhood gained a new clubhouse and entrance, and property values rose after the community was built beside it.",
+      "That experience reminded me that a launch has more than one audience. Buyers need information to make a decision. Neighbors and local officials need to understand what is being proposed and how they can respond.",
+      "## Use opening day to confirm the decision.",
+      "On opening day, I was assigned to one of the model homes to walk buyers through it and answer questions. I had spent the year before helping build the digital experience, so I expected to have plenty to explain.",
+      "Instead, many people came in knowing which home they wanted. They had followed the community for months. They were there to see the plan in person and feel confident in their choice.",
+      "A salesperson told me he had sold a home while standing on a dirt lot, using an iPad to show the buyer where the lot was and what it would look out on. The buyer said yes before there was a model to visit.",
+      "A community launch starts well before the doors open. Give buyers a way to learn, stay connected, and take the next step. And if the surrounding community has a voice in the project, make sure they have a clear way to understand it, too.",
+      "I help real estate teams design digital experiences that support buyers from the first announcement through the sales process. If your community is still months from opening, that work can start now.",
+    ],
+  },
+  {
     slug: "senior-product-designer-ai-workflow",
     title: "Faster Is Easy Now. Knowing What's Wrong Is Still the Job.",
     category: "AI / Design Process",
