@@ -39,14 +39,14 @@ export default function BlogPostPage() {
     "@type": "BlogPosting",
     headline: post.title,
     description: post.seoDescription,
-    ...(post.image ? { image: `https://namnum.net${post.image}` } : {}),
+    ...(post.image ? { image: `https://www.namnum.net${post.image}` } : {}),
     datePublished: post.date,
     author: {
       "@type": "Person",
       name: "Danny Namnum",
-      url: "https://namnum.net",
+      url: "https://www.namnum.net",
     },
-    mainEntityOfPage: `https://namnum.net/insights/${post.slug}`,
+    mainEntityOfPage: `https://www.namnum.net/insights/${post.slug}`,
   };
 
   return (
@@ -55,7 +55,7 @@ export default function BlogPostPage() {
         title={post.seoTitle}
         description={post.seoDescription}
         ogUrl={`/insights/${post.slug}`}
-        ogImage={post.image ? `https://namnum.net${post.image}` : undefined}
+        ogImage={post.image ? `https://www.namnum.net${post.image}` : undefined}
         ogType="article"
         jsonLd={jsonLd}
       />

@@ -9,7 +9,7 @@ interface SEOProps {
   jsonLd?: object;
 }
 
-const SITE_BASE = "https://namnum.net";
+const SITE_BASE = "https://www.namnum.net";
 const DEFAULT_OG_IMAGE = `${SITE_BASE}/assets/danny-headshot.jpg`;
 
 export default function SEO({

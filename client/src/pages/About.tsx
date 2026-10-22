@@ -39,7 +39,7 @@ export default function About() {
         title="About Danny Namnum — Fractional Head of UX"
         description="15+ years designing websites and digital products. Stanford AI UX Certified. One senior partner — no agency layers, no handoffs."
         ogUrl="/about"
-        ogImage="https://namnum.net/assets/danny-headshot.jpg"
+        ogImage="https://www.namnum.net/assets/danny-headshot.jpg"
       />
       <Nav />
       <main className="pt-28 md:pt-40">

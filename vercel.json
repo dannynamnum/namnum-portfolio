@@ -3,7 +3,9 @@
   "outputDirectory": "dist/public",
   "installCommand": "pnpm install",
   "framework": null,
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "routes": [
+    { "src": "^/strategies-for-growth-and-profitability/?$", "status": 410 },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }

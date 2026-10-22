@@ -14,7 +14,7 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 
-const SITE = "https://namnum.net";
+const SITE = "https://www.namnum.net";
 const DEFAULT_IMAGE = `${SITE}/assets/danny-headshot.jpg`;
 const OUT = path.resolve("dist/public");
 const TMP = path.resolve("dist/.prerender");
@@ -152,6 +152,13 @@ pages.push(
 for (const page of pages) {
   await writeRoute(page.route, render(shell, { ...page, image: shareImage(page.image) }));
 }
+
+// Add the home canonical after generating route HTML from the neutral shell.
+// Helmet owns this tag after hydration, so navigation can replace it.
+await writeFile(
+  path.join(OUT, "index.html"),
+  shell.replace("</head>", `    <link rel="canonical" href="${SITE}/" data-rh="true" />\n  </head>`),
+);
 
 await rm(TMP, { recursive: true, force: true });
 console.log(`prerender-meta: wrote ${pages.length} routes`);

@@ -23,15 +23,15 @@ Danny Namnum is a UX and website designer specializing in real estate websites, 
 - SaaS / Fintech
 
 ## Key Pages
-- Homepage: https://namnum.net
-- Work/Portfolio: https://namnum.net/work
-- Insights/Blog: https://namnum.net/insights
-- About: https://namnum.net/about
-- Babcock Ranch Case Study: https://namnum.net/work/babcock-ranch
-- PENN Entertainment Case Study: https://namnum.net/work/penn-entertainment
-- GL Homes Case Study: https://namnum.net/work/gl-homes
-- Model Showcase Case Study: https://namnum.net/work/model-showcase
-- Payology Case Study: https://namnum.net/work/payology
+- Homepage: https://www.namnum.net
+- Work/Portfolio: https://www.namnum.net/work
+- Insights/Blog: https://www.namnum.net/insights
+- About: https://www.namnum.net/about
+- Babcock Ranch Case Study: https://www.namnum.net/work/babcock-ranch
+- PENN Entertainment Case Study: https://www.namnum.net/work/penn-entertainment
+- GL Homes Case Study: https://www.namnum.net/work/gl-homes
+- Model Showcase Case Study: https://www.namnum.net/work/model-showcase
+- Payology Case Study: https://www.namnum.net/work/payology
 
 ## Contact
 - Email: danny@namnum.net
