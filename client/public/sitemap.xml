@@ -51,6 +51,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.namnum.net/work/trip-genie</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.namnum.net/insights</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

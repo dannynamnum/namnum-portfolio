@@ -51,4 +51,10 @@ export const A = {
   pennLiveUser: "/assets/penn-liveuser.webp",
   pennStyleGuide: "/assets/penn-styleguide.png",
   pennCasinoFloor: "/assets/penn-casinofloor.webp",
+  // Trip Genie capstone
+  tripGenieSuggestions: "/assets/trip-genie/ai-suggestions.png",
+  tripGenieEdit: "/assets/trip-genie/edit-suggestion.png",
+  tripGenieReview: "/assets/trip-genie/review-and-generate.png",
+  tripGeniePreview: "/assets/trip-genie/itinerary-preview.png",
+  tripGenieCertificate: "/assets/trip-genie/stanford-certificate.webp",
 };

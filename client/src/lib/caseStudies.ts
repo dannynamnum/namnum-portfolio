@@ -9,7 +9,7 @@ export interface CaseStudySection {
   heading: string;
   body: string[];
   bullets?: { title?: string; text: string }[];
-  images?: { src: string; alt: string; caption?: string }[];
+  images?: { src: string; alt: string; caption?: string; fit?: "contain" | "cover" }[];
 }
 
 export interface CaseStudy {
@@ -22,6 +22,7 @@ export interface CaseStudy {
   tags: string[]; // multi-tag filter support
   hero: string;
   heroAlt: string;
+  heroFit?: "contain" | "cover";
   cardImage: string;
   details: { role: string; industry: string; timeline?: string; scope: string };
   problem: CaseStudySection;
@@ -34,7 +35,7 @@ export interface CaseStudy {
   };
   role?: CaseStudySection;
   metrics?: { value: string; suffix?: string; label: string }[];
-  results: { heading: string; body: string[] };
+  results: { label?: string; heading: string; body: string[] };
   testimonial?: { quote: string; name: string; title: string };
   userQuote?: { quote: string; attribution: string };
   featured?: boolean;
@@ -503,6 +504,79 @@ export const caseStudies: CaseStudy[] = [
       body: [
         "With 1,299 options across 12 categories, home customization used to mean hours sorting through physical samples. The Options Catalog changed that. Buyers explore on their own time, arrive prepared, and make decisions faster.",
         "Faster decisions, shorter consultations, less back-and-forth.",
+      ],
+    },
+  },
+
+  {
+    slug: "trip-genie",
+    index: "08",
+    title: "Trip Genie",
+    headline: "Personalized itineraries. The host stays in control.",
+    oneLiner:
+      "My Stanford Engineering capstone explores AI-assisted itineraries for short-term rental teams, with the host in control. This is a design concept, not a launched product.",
+    industry: "Hospitality",
+    tags: ["hospitality"],
+    hero: A.tripGenieSuggestions,
+    heroAlt: "Trip Genie host view showing AI itinerary suggestions and why they were recommended",
+    heroFit: "contain",
+    cardImage: A.tripGenieSuggestions,
+    details: {
+      role: "UX Product Designer · Capstone",
+      industry: "Hospitality · Short-term rentals",
+      timeline: "May to June 2025",
+      scope: "Research · AI product UX · Wireframes",
+    },
+    problem: {
+      label: "The Problem",
+      heading: "Hosts wanted to personalize. Guest context was scattered.",
+      body: [
+        "I surveyed six hospitality professionals with more than a decade of experience across hotels and short-term rentals. All six agreed that pre-arrival questions were the most time-consuming guest contact point and that centralizing preferences would save time. Much of that context lived in platform messages or other systems, often without enough detail to rely on.",
+        "Most of the hosts surveyed were already personalizing messages or sharing recommendations and itineraries. The opportunity was to make those thoughtful touches easier to prepare, not to replace what hosts know about their guests and local area.",
+      ],
+      bullets: [
+        { title: "Preferences are fragmented", text: "Guest details can be spread across booking messages and hosting tools, with context missing or incomplete." },
+        { title: "Pre-arrival work takes time", text: "Everyone surveyed identified pre-arrival questions as the most time-consuming point of guest communication." },
+        { title: "Good recommendations need context", text: "Travel pace, interests, group, occasion and practical needs all shape what feels right." },
+      ],
+    },
+    solution: {
+      label: "The Design",
+      heading: "A host-facing assistant between guest intake and arrival.",
+      body: [
+        "Trip Genie fits into the itinerary-planning step after a guest submits a preference survey and before the host sends a pre-arrival message. It uses the guest's travel style and trip context to suggest two or three activities for the host to review.",
+        "The wireframes show the host reviewing the rationale, accepting, editing or declining each suggestion, then previewing the itinerary before generating a guest-facing version. The AI does not send anything on its own.",
+      ],
+      bullets: [
+        { title: "Suggestions tied to the guest", text: "Activities reflect stated interests, pace, travel group and occasion, with practical context such as dog-friendly options." },
+        { title: "Reasoning in view", text: "Each suggestion includes a short explanation, with the concept also proposing links back to the guest intake or message context." },
+        { title: "Host control at every step", text: "Accept, edit or decline individual ideas, then review the itinerary as a whole before it is prepared for the guest." },
+      ],
+      images: [
+        { src: A.tripGenieEdit, alt: "Trip Genie wireframe for editing an AI itinerary suggestion", caption: "Inline editing lets the host adjust an activity, time and description.", fit: "contain" },
+        { src: A.tripGenieReview, alt: "Trip Genie wireframe for reviewing selected itinerary suggestions before generating", caption: "The host reviews the selected moments before generating the itinerary.", fit: "contain" },
+        { src: A.tripGeniePreview, alt: "Trip Genie guest-facing itinerary preview with a Yosemite Valley day plan", caption: "A concept for how host-approved activities could be presented to a guest before arrival.", fit: "contain" },
+      ],
+    },
+    role: {
+      label: "Trust & Ethics",
+      heading: "Design for trust, not blind automation.",
+      body: [
+        "The ethics review treated privacy, recommendation quality and inclusion as product concerns. An itinerary can reveal where a guest plans to be and when. A plausible suggestion can still be wrong for a guest's needs or out of date. The host remains responsible for reviewing what reaches the guest.",
+        "The capstone also proposed safeguards for future design work, including encrypted guest data, access controls, secure sharing, and preference fields for accessibility, price sensitivity and other needs. Those are recommendations in the project, not features I am claiming are implemented.",
+      ],
+      bullets: [
+        { title: "Keep a person accountable", text: "Suggestions are not auto-sent. Hosts review the plan and approve the final itinerary." },
+        { title: "Make the basis visible", text: "Explain why an idea fits and, where possible, show the guest input or source context behind it." },
+        { title: "Plan for different needs", text: "The ethics review calls for accessibility and budget context, plus alternatives when an activity may not fit." },
+      ],
+    },
+    results: {
+      label: "Project Status",
+      heading: "A capstone concept with clear boundaries.",
+      body: [
+        "This was my capstone for Stanford Online's UI/UX Design for AI Products certificate, sponsored by Stanford Engineering. The work includes discovery research, a guest-journey placement, host workflow wireframes and an ethics review. Trip Genie is a design concept, not a launched product, and I am not claiming live-use or performance results.",
+        "The project shows how I approach AI product design: start with a real workflow, make recommendations understandable and editable, keep people accountable for consequential decisions, and surface privacy and inclusion risks early.",
       ],
     },
   },

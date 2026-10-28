@@ -29,7 +29,7 @@ export default function Work() {
     <div className="min-h-screen bg-paper">
       <SEO
         title="Portfolio — Real Estate & Kiosk Design Work"
-        description="Case studies in real estate website design, kiosk UX, fintech apps, and hospitality. See how better design drives real business outcomes."
+        description="Case studies in real estate website design, kiosk UX, fintech apps, hospitality, and AI product design. See how better design drives real outcomes."
         ogUrl="/work"
       />
       <Nav />
@@ -77,7 +77,7 @@ export default function Work() {
                       src={cs.cardImage}
                       alt={cs.heroAlt}
                       loading="eager"
-                      className={`w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025] ${
+                      className={`w-full transition-transform duration-700 ease-out group-hover:scale-[1.025] ${cs.heroFit === "contain" ? "bg-white object-contain" : "object-cover"} ${
                         i % 3 === 0 ? "aspect-[16/8.5]" : "aspect-[4/3]"
                       }`}
                     />

@@ -65,7 +65,9 @@ function SectionBlock({
         {section.images && section.images.length > 0 && (
           <div
             className={`mt-14 grid gap-6 ${
-              section.images.length > 1 ? "md:grid-cols-2" : ""
+              section.images.some((img) => img.fit === "contain")
+                ? "mx-auto max-w-5xl md:grid-cols-2"
+                : section.images.length > 1 ? "md:grid-cols-2" : ""
             }`}
           >
             {section.images.map((img, i) => (
@@ -74,14 +76,22 @@ function SectionBlock({
                 delay={i * 70}
                 as="figure"
                 className={
-                  section.images!.length % 2 === 1 && i === 0 ? "md:col-span-2" : ""
+                  section.images!.some((image) => image.fit === "contain") &&
+                  section.images!.length === 3 && i === 2
+                    ? "md:col-span-2 md:w-1/2 md:justify-self-center"
+                    : !section.images!.some((image) => image.fit === "contain") &&
+                        section.images!.length % 2 === 1 && i === 0
+                      ? "md:col-span-2"
+                      : ""
                 }
               >
                 <img
                   src={img.src}
                   alt={img.alt}
                   loading="eager"
-                  className="w-full max-h-[360px] border border-ink/10 bg-white object-cover object-top transition-transform duration-700"
+                  className={`w-full border border-ink/10 bg-white object-top transition-transform duration-700 ${
+                    img.fit === "contain" ? "max-h-[520px] object-contain" : "max-h-[360px] object-cover"
+                  }`}
                 />
                 {img.caption && (
                   <figcaption className="mt-2.5 font-meta text-[10px] text-ink/45">
@@ -138,11 +148,13 @@ export default function CaseStudyPage() {
 
         {/* Hero image */}
         <Reveal>
-          <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+          <div className={`mx-auto px-5 md:px-10 ${cs.heroFit === "contain" ? "max-w-[1000px]" : "max-w-[1400px]"}`}>
             <img
               src={cs.hero}
               alt={cs.heroAlt}
-              className="w-full max-h-[480px] border border-ink/10 object-cover object-center"
+              className={`w-full border border-ink/10 object-center ${
+                cs.heroFit === "contain" ? "h-auto bg-white object-contain" : "max-h-[480px] object-cover"
+              }`}
             />
           </div>
         </Reveal>
@@ -250,6 +262,44 @@ export default function CaseStudyPage() {
 
         {cs.role && <SectionBlock section={cs.role} index={cs.beforeAfter ? "04" : "03"} />}
 
+        {cs.slug === "trip-genie" && (
+          <section className="border-t border-ink/10 py-12 md:py-16">
+            <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+              <div className="grid items-center gap-8 lg:grid-cols-[1fr_0.8fr] lg:gap-16">
+                <div>
+                  <Reveal>
+                    <div className="flex items-center gap-3">
+                      <span className="h-2 w-2 bg-coral shrink-0" aria-hidden="true" />
+                      <span className="font-meta text-[11px] md:text-xs text-ink/55">Credential</span>
+                    </div>
+                    <h2 className="mt-4 max-w-2xl font-display text-[clamp(1.6rem,3vw,2.25rem)] font-extrabold leading-[1.05] tracking-[-0.025em] text-ink">
+                      Stanford Online training in AI product design.
+                    </h2>
+                  </Reveal>
+                  <Reveal delay={60}>
+                    <p className="mt-5 max-w-2xl text-ink/65 md:text-lg leading-relaxed">
+                      I completed the UI/UX Design for AI Products certificate (XGAL0001) on July 1, 2025. Stanford Engineering was the sponsoring school, and its Center for Global &amp; Online Education verified the credential.
+                    </p>
+                  </Reveal>
+                </div>
+                <Reveal delay={90} as="figure" className="w-full max-w-[560px] lg:justify-self-end">
+                  <a href={A.tripGenieCertificate} target="_blank" rel="noopener noreferrer" aria-label="Open the cropped Stanford certificate">
+                    <img
+                      src={A.tripGenieCertificate}
+                      alt="Stanford Online Certificate of Achievement in UI/UX Design for AI Products, completed by Danny Namnum on July 1, 2025, sponsored by Stanford Engineering and verified by the Stanford Engineering Center for Global & Online Education"
+                      loading="lazy"
+                      className="w-full border border-ink/10 bg-white"
+                    />
+                  </a>
+                  <figcaption className="mt-2.5 font-meta text-[10px] text-ink/45">
+                    Certificate of Achievement · XGAL0001
+                  </figcaption>
+                </Reveal>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Results */}
         <section className="border-t border-ink/10 py-16 md:py-24">
           <div className="mx-auto max-w-[1400px] px-5 md:px-10">
@@ -273,7 +323,7 @@ export default function CaseStudyPage() {
               <Reveal>
                 <div className="flex items-center gap-3">
                   <span className="h-2 w-2 bg-coral shrink-0" aria-hidden="true" />
-                  <span className="font-meta text-[11px] md:text-xs text-ink/55">Results</span>
+                  <span className="font-meta text-[11px] md:text-xs text-ink/55">{cs.results.label || "Results"}</span>
                 </div>
               </Reveal>
               <div>

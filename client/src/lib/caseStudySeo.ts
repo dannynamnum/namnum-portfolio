@@ -35,4 +35,9 @@ export const CASE_STUDY_SEO: Record<string, { title: string; description: string
     description: "Simplifying a 1,299-option home customization tool into a clear, guided buying experience for a major real estate developer.",
     ogImage: "https://www.namnum.net/assets/OptionsCatalogiPadMockupv3.webp",
   },
+  "trip-genie": {
+    title: "Trip Genie AI Itinerary Assistant | Stanford Capstone",
+    description: "Stanford Engineering capstone exploring host-approved AI itineraries for short-term rental teams. A design concept, not a launched product.",
+    ogImage: "https://www.namnum.net/assets/trip-genie/ai-suggestions.png",
+  },
 };
