@@ -65,7 +65,9 @@ function SectionBlock({
         {section.images && section.images.length > 0 && (
           <div
             className={`mt-14 grid gap-6 ${
-              section.images.some((img) => img.fit === "contain")
+              section.images.length === 1 && section.images[0].fit === "contain"
+                ? "mx-auto max-w-[360px]"
+                : section.images.some((img) => img.fit === "contain")
                 ? "mx-auto max-w-5xl md:grid-cols-2"
                 : section.images.length > 1 ? "md:grid-cols-2" : ""
             }`}
@@ -152,6 +154,7 @@ export default function CaseStudyPage() {
             <img
               src={cs.hero}
               alt={cs.heroAlt}
+              style={{ objectPosition: cs.heroPosition }}
               className={`w-full border border-ink/10 object-center ${
                 cs.heroFit === "contain" ? "h-auto bg-white object-contain" : "max-h-[480px] object-cover"
               }`}
@@ -305,11 +308,11 @@ export default function CaseStudyPage() {
           <div className="mx-auto max-w-[1400px] px-5 md:px-10">
             {cs.metrics && (
               !cs.slug.startsWith("penn") &&
-              <div className="mb-14 grid gap-8 sm:grid-cols-2 max-w-3xl">
+              <div className={`mb-14 grid gap-8 ${cs.metrics.length === 3 ? "sm:grid-cols-3 max-w-4xl" : "sm:grid-cols-2 max-w-3xl"}`}>
                 {cs.metrics.map((m, i) => (
                   <Reveal key={m.label} delay={i * 80}>
                     <div className="border-l-2 border-coral pl-6">
-                      <p className="font-display text-6xl md:text-7xl font-extrabold tracking-[-0.03em] text-ink">
+                      <p className={`font-display ${cs.metrics!.length === 3 ? "text-5xl md:text-6xl" : "text-6xl md:text-7xl"} font-extrabold tracking-[-0.03em] text-ink`}>
                         {m.value}
                         {m.suffix && <span className="text-coral">{m.suffix}</span>}
                       </p>

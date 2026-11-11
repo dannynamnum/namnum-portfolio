@@ -23,6 +23,7 @@ export interface CaseStudy {
   hero: string;
   heroAlt: string;
   heroFit?: "contain" | "cover";
+  heroPosition?: string;
   cardImage: string;
   details: { role: string; industry: string; timeline?: string; scope: string };
   problem: CaseStudySection;
@@ -504,6 +505,72 @@ export const caseStudies: CaseStudy[] = [
       body: [
         "With 1,299 options across 12 categories, home customization used to mean hours sorting through physical samples. The Options Catalog changed that. Buyers explore on their own time, arrive prepared, and make decisions faster.",
         "Faster decisions, shorter consultations, less back-and-forth.",
+      ],
+    },
+  },
+
+  {
+    slug: "rollaway",
+    index: "09",
+    title: "RollAway",
+    headline: "Helping first-time campers feel ready to go.",
+    oneLiner:
+      "RollAway paired a luxury electric Suite on Wheels with a complete guest journey. I connected booking, trip planning, lifecycle emails and human support.",
+    industry: "Hospitality",
+    tags: ["hospitality"],
+    hero: A.rollawaySuite,
+    heroAlt: "RollAway's electric Suite on Wheels with its rear door open in a forest setting",
+    heroPosition: "51% 54%",
+    cardImage: A.rollawaySuite,
+    details: {
+      role: "Co-Founder & Head of Product and Design",
+      industry: "Hospitality · Electric Suite on Wheels rentals",
+      timeline: "2023 to present",
+      scope: "Service Design · Guest Journey · Lifecycle Communications",
+    },
+    problem: {
+      label: "The Challenge",
+      heading: "The Suite on Wheels was appealing. The trip still felt unfamiliar.",
+      body: [
+        "Most of the guests who booked with RollAway had never camped before. They liked the idea of a luxury electric Suite on Wheels, but still had practical questions: How does it work? Where can we park? What should we do? How do we get there?",
+        "A booking flow couldn't answer all of that on its own. I needed to connect what guests saw online with the guidance and support they would receive before pickup, on the road and after the stay.",
+      ],
+    },
+    solution: {
+      label: "The Guest Journey",
+      heading: "A plan before arrival. A person when it mattered.",
+      body: [
+        "I worked with our CEO and CTO on product direction and mapped the touchpoints across the guest journey. The website, emails, itinerary and staff welcome had to work as one service, rather than leave guests to connect the pieces themselves.",
+      ],
+      bullets: [
+        { title: "Booking and pricing", text: "I configured the Squarespace site and existing Lodgify booking platform, shaping a mobile-first path through the listing, pricing presentation and checkout. The work used existing software, not a custom booking engine." },
+        { title: "Emails that guide the journey", text: "I mapped the lifecycle in Mailchimp and designed email touchpoints across booking, cart recovery, pre-arrival, in-stay and post-stay communications." },
+        { title: "A welcome before the drive", text: "At pickup, staff welcomed guests and gave them a guided walkthrough of the Suite on Wheels, making sure they understood how it worked and how to use it." },
+        { title: "Help beyond pickup", text: "I worked across the customer-service side too. Guests had people to turn to during the trip, not just a set of screens and instructions." },
+      ],
+    },
+    role: {
+      label: "The Itinerary",
+      heading: "Not just where to go. How to make the trip work.",
+      body: [
+        "I created personalized itineraries that mapped the journey, including stops, campgrounds, charging guidance and the details that made each day practical. Recommendations could go down to the exact campsite, and we helped guests with campground bookings.",
+        "The editorial design brought the trip together in one guide: orientation, the route, camp setup, activity options and the return. It was part of preparing someone for an unfamiliar experience, not simply a list of attractions.",
+        "AI assisted with research and sequencing. I drove the story and reviewed the guest-specific output before it reached the guest. It was a tool in the editorial process, not an autonomous itinerary product.",
+      ],
+      images: [
+        { src: A.rollawayItineraryCover, alt: "RollAway Yosemite itinerary cover with editorial typography and a landscape photograph, shown without guest details", caption: "A personalized itinerary prepared guests before pickup. Cover shown with the guest-identifying footer omitted.", fit: "contain" },
+      ],
+    },
+    metrics: [
+      { value: "Sold out", label: "First season, in hours" },
+      { value: "~70", suffix: "%", label: "Reported occupancy" },
+      { value: "5", suffix: "/5", label: "Every guest review" },
+    ],
+    results: {
+      heading: "A sold-out first season and five-star stays.",
+      body: [
+        "RollAway reported that its first season sold out in hours at about $400 per night. The business also reported about 70% occupancy and five stars in every guest review.",
+        "Those are business-wide results, not an isolated measure of one UX change. My contribution was to connect the booking to the stay, so guests had a plan, understood their Suite on Wheels and knew there were people who could help.",
       ],
     },
   },

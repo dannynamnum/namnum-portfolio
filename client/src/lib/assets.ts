@@ -51,6 +51,9 @@ export const A = {
   pennLiveUser: "/assets/penn-liveuser.webp",
   pennStyleGuide: "/assets/penn-styleguide.png",
   pennCasinoFloor: "/assets/penn-casinofloor.webp",
+  // RollAway service-design case study
+  rollawaySuite: "/assets/rollaway/suite-on-wheels-hero.webp",
+  rollawayItineraryCover: "/assets/rollaway/itinerary-cover.webp",
   // Trip Genie capstone
   tripGenieSuggestions: "/assets/trip-genie/ai-suggestions.png",
   tripGenieEdit: "/assets/trip-genie/edit-suggestion.png",

@@ -77,6 +77,7 @@ export default function Work() {
                       src={cs.cardImage}
                       alt={cs.heroAlt}
                       loading="eager"
+                      style={{ objectPosition: cs.heroPosition }}
                       className={`w-full transition-transform duration-700 ease-out group-hover:scale-[1.025] ${cs.heroFit === "contain" ? "bg-white object-contain" : "object-cover"} ${
                         i % 3 === 0 ? "aspect-[16/8.5]" : "aspect-[4/3]"
                       }`}

@@ -35,6 +35,11 @@ export const CASE_STUDY_SEO: Record<string, { title: string; description: string
     description: "Simplifying a 1,299-option home customization tool into a clear, guided buying experience for a major real estate developer.",
     ogImage: "https://www.namnum.net/assets/OptionsCatalogiPadMockupv3.webp",
   },
+  "rollaway": {
+    title: "RollAway Guest Experience & Service Design | Danny Namnum",
+    description: "Connecting booking, personalized itineraries, lifecycle communications and human support for first-time guests of a luxury electric Suite on Wheels service.",
+    ogImage: "https://www.namnum.net/assets/rollaway/suite-on-wheels-hero.jpg",
+  },
   "trip-genie": {
     title: "Trip Genie AI Itinerary Assistant | Stanford Capstone",
     description: "Stanford Engineering capstone exploring host-approved AI itineraries for short-term rental teams. A design concept, not a launched product.",
